@@ -4,9 +4,9 @@ StudX is a full-stack marketplace platform built with the MERN stack, designed s
 
 ## 📌 Features
 
-- 👩‍🎓 **Student-Only Access** via college email
+- 👩‍🎓 **Student Access** via email id
 - 🛍️ **Product Listings** with photos, categories, and pricing
-- 🏫 **Campus Groups** to filter items by college/university
+- 🏫 **Campus** to filter items by college/university
 - 💬 **In-App Chat** between buyer and seller
 - 🔍 **Search & Filters** by category, price, and campus
 - 🧾 **User Profiles & Product Management**
