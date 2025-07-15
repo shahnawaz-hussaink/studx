@@ -4,7 +4,7 @@ StudX is a full-stack marketplace platform built with the MERN stack, designed s
 
 ## 📌 Features
 
-- 👩‍🎓 **Student-Only Access** via college email
+- 👩‍🎓 **Students Access** via email
 - 🛍️ **Product Listings** with photos, categories, and pricing
 - 🏫 **Campus Groups** to filter items by college/university
 - 💬 **In-App Chat** between buyer and seller
@@ -21,9 +21,7 @@ StudX is a full-stack marketplace platform built with the MERN stack, designed s
 | Frontend   | React.js, Tailwind CSS, Vite   |
 | Backend    | Node.js, Express.js            |
 | Database   | MongoDB (Mongoose)             |
-| Auth       | JWT + College Email Validation |
-| File Upload| Cloudinary (for images)        |
-| Hosting    | Vercel (Frontend) + Render (Backend) |
+| Auth       | JWT                            |
 
 ---
 
@@ -78,11 +76,8 @@ Saved/favorited items
 Notifications system
 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first.
+Pull requests are welcome! 
 
-📄 License
-
-This project is licensed under the MIT License.
 
 👨‍💻 Developed by
 
