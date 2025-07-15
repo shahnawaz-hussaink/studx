@@ -45,7 +45,6 @@ studx/
 
 ### ⚙️ Setup
 
-```bash
 # Clone the repo
 git clone https://github.com/your-username/studx.git
 cd studx
@@ -78,16 +77,11 @@ Saved/favorited items
 Notifications system
 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first.
-
-📄 License
-
-This project is licensed under the MIT License.
+Pull requests are welcome!
 
 👨‍💻 Developed by
 
-Shahnawaz Hussain – Portfolio • GitHub
-
+Shahnawaz Hussain 
 
 ---
 
