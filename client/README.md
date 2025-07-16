@@ -4,9 +4,13 @@ StudX is a full-stack marketplace platform built with the MERN stack, designed s
 
 ## 📌 Features
 
+<<<<<<< HEAD
 - 👩‍🎓 **Students Access** via email
+=======
+- 👩‍🎓 **Student Access** via email id
+>>>>>>> 0b75e04bd8c9fb4c99c2eb160f3a83823ff0cc53
 - 🛍️ **Product Listings** with photos, categories, and pricing
-- 🏫 **Campus Groups** to filter items by college/university
+- 🏫 **Campus** to filter items by college/university
 - 💬 **In-App Chat** between buyer and seller
 - 🔍 **Search & Filters** by category, price, and campus
 - 🧾 **User Profiles & Product Management**
@@ -43,7 +47,7 @@ studx/
 
 ### ⚙️ Setup
 
-```bash
+```bash 
 # Clone the repo
 git clone https://github.com/your-username/studx.git
 cd studx
@@ -76,13 +80,12 @@ Saved/favorited items
 Notifications system
 🤝 Contributing
 
-Pull requests are welcome! 
-
+=======
+Pull requests are welcome!
 
 👨‍💻 Developed by
 
-Shahnawaz Hussain – Portfolio • GitHub
-
+Shahnawaz Hussain 
 
 ---
 
