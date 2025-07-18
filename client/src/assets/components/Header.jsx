@@ -10,10 +10,14 @@ import { useState } from "react";
 export default function Header() {
   const [searchText, setSearchText] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleSearch = (event) => {
+    event.preventDefault();
     console.log(searchText);
   };
+
+  let inputChange = (event)=>{
+    setSearchText(event.target.value);
+  }
 
   return (
     <div className="Head w-full h-25 bg-[#1B6392] flex items-center justify-between px-6 sticky">
@@ -28,7 +32,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search for anything..."
-            onChange={(e) => setSearchText(e.target.value)}
+            onChange={inputChange}
             className="flex-grow py-1 text-gray-700 focus:outline-none"
           />
           <button onClick={handleSearch} type="button" className="text-gray-700 hover:text-black">
