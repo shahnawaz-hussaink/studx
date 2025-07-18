@@ -13,7 +13,7 @@ export default function HeaderMain() {
   };
 
   return (
-    <div className="bg-[#1B6392] px-6 py-4 sticky top-0 z-50">
+    <div className=" bg-[#1B6392] px-6 py-4 sticky top-0 z-50">
       <div className="flex items-center justify-between">
         <a href="/">
           <h3 className="unbounded text-3xl text-white">Stud X</h3>
@@ -27,10 +27,10 @@ export default function HeaderMain() {
           />
         </div>
 
-        <div className="hidden md:flex items-center gap-5 text-white">
-          <a href="/"><ShoppingCart size={28} /></a>
-          <a href="/"><Heart size={28} /></a>
-          <a href="/"><User size={28} /></a>
+        <div className="hidden md:flex items-center gap-5 ">
+          <a href="/cart" className="text-white hover:text-black"><ShoppingCart size={28} /></a>
+          <a href="/wishlist" className="text-white hover:text-black"><Heart size={28} /></a>
+          <a href="/user" className="text-white hover:text-black"><User size={28} /></a>
         </div>
 
         <div className="md:hidden">
