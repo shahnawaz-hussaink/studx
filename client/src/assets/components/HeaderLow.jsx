@@ -1,8 +1,10 @@
 import { MapPin, Info, Headphones, Phone } from "lucide-react";
+import SearchBar from "./SearchBar";
 
 export default function HeaderTop() {
   return (
-    <div className="w-full bg-white border-b border-gray-200 text-sm lg:text-md">
+    <>
+      <div className="w-full bg-white border-b border-gray-200 text-sm lg:text-md">
       {/* Desktop View */}
       <div className="hidden md:flex justify-between items-center px-4 py-3">
         <div className="flex gap-6 items-center">
@@ -30,27 +32,11 @@ export default function HeaderTop() {
           <span>+91-965-080-XXXX</span>
         </div>
       </div>
-      <div className="hidden px-4 py-2 space-y-2">
-        <div className="flex justify-between items-center">
-          <select className="border px-2 py-1 rounded text-xs w-1/2">
-            <option>Select Category</option>
-            <option>Furniture</option>
-            <option>Electronics</option>
-            <option>Stationary</option>
-            <option>Kitchen</option>
-          </select>
-          <div className="flex items-center gap-1 text-xs">
-            <Phone size={16} />
-            <span>+91-965-080-XXXX</span>
-          </div>
-        </div>
-        <div className="flex justify-between items-center text-xs">
-          <a href="/track">Track</a>
-          <a href="/sell">Sell</a>
-          <a href="/buy">Buy</a>
-          <a href="/contact">Help</a>
-        </div>
-      </div>
+      
     </div>
+    <div className="flex md:hidden w-full p-5">
+      <SearchBar/>
+    </div>
+    </>
   );
 }

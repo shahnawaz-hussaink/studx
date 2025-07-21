@@ -1,15 +1,51 @@
-import {Search} from 'lucide-react'
-export default function SearchBar({ searchText, onChange, onSearch }) {
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Search } from 'lucide-react';
+
+export default function SearchBar({ searchText, onChange,}) {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const navigate = useNavigate(); 
+
+  const handleSearch = () => {
+    if (selectedCategory) {
+      navigate(`/category/${selectedCategory.toLowerCase()}`);
+      
+    } else {
+      console.log('No category selected');
+    }
+    // Later: i have to add backend call here using fetch or axios
+    //fetch(`/api/search?query=${searchText}&category=${selectedCategory}`)
+  };
+
   return (
-    <div className="flex items-center h-12 w-full bg-white border border-gray-300 px-4 py-2 rounded-full shadow-sm">
+    <div className="flex items-center h-12 w-full md:w-full bg-white border border-gray-300 px-4 py-2 rounded-full shadow-sm">
+      { (
+        <>
+          <select
+            className="text-sm bg-transparent pr-2 focus:outline-none"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            <option value="">Select</option>
+            <option>Furniture</option>
+            <option>Electronics</option>
+            <option>Stationary</option>
+            <option>Kitchen</option>
+          </select>
+
+          <div className="w-px h-6 bg-gray-300 mx-2" />
+        </>
+      )}
+
       <input
         type="text"
         placeholder="Search for anything..."
-        value={searchText}
+        value={selectedCategory}
         onChange={onChange}
-        className="flex-grow py-1 text-gray-700 focus:outline-none"
+        className="flex-grow py-1 text-gray-700 bg-transparent focus:outline-none"
       />
-      <button onClick={onSearch} type="button" className="text-gray-500 hover:text-black">
+
+      <button onClick={handleSearch} type="button" className="text-gray-500 hover:text-black">
         <Search size={22} />
       </button>
     </div>

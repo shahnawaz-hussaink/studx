@@ -42,13 +42,7 @@ export default function HeaderMain() {
       </div>
 
       {menuOpen && (
-        <MobileMenu>
-          <SearchBar
-            searchText={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            onSearch={handleSearch}
-          />
-        </MobileMenu>
+        <MobileMenu/>
       )}
     </div>
   );
