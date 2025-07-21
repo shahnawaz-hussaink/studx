@@ -26,7 +26,7 @@ export default function SearchBar({ searchText, onChange,}) {
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
-            <option value="">Select</option>
+            <option value="">Category</option>
             <option>Furniture</option>
             <option>Electronics</option>
             <option>Stationary</option>
@@ -40,7 +40,7 @@ export default function SearchBar({ searchText, onChange,}) {
       <input
         type="text"
         placeholder="Search for anything..."
-        value={selectedCategory}
+        value={searchText}
         onChange={onChange}
         className="flex-grow py-1 text-gray-700 bg-transparent focus:outline-none"
       />
