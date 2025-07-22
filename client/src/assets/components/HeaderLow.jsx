@@ -20,10 +20,10 @@ export default function HeaderTop() {
 
   return (
     <>
-      <div className="w-full bg-white border-b border-gray-200 text-sm lg:text-md">
+      <div className="raleway w-full bg-white border-b border-gray-200 text-sm lg:text-md">
       <div className="hidden md:flex justify-between items-center px-4 py-3">
         <div className="flex gap-6 items-center">
-          <select className="border ml-2 px- py-1 rounded">
+          <select className=" border ml-2 px- py-1 rounded">
             <option >
                 Select Category
             </option>

@@ -14,10 +14,10 @@ export default function HeaderMain() {
   };
 
   return (
-    <div className=" bg-[#1B6392] px-6 py-4 sticky top-0 z-50">
+    <div className="raleway bg-[#1B6392] px-6 py-4 sticky top-0 z-50">
       <div className="flex items-center justify-between">
         <a href="/">
-          <h3 className="Header-logo text-3xl text-white">STUDx</h3>
+          <h3 className="raleway Header-logo text-4xl text-white">STUDx</h3>
         </a>
 
         <div className="hidden md:flex items-center w-1/2 px-5">

@@ -8,7 +8,7 @@ export default function SiteHighlights() {
     return (
         <>
         
-             <div className="hidden md:flex justify-center items-center px-4 ">
+             <div className="raleway hidden md:flex justify-center items-center px-4 ">
             <div className="flex flex-col md:flex-row border border-gray-300 rounded-md w-full md:w-18/20 justify-center bg-white ">
                 <div className="flex w-full md:w-1/3 md:p-4 items-center md:justify-center">
                     <div className="m-3">

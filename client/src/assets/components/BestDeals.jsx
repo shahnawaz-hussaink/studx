@@ -18,13 +18,13 @@ export default function BestDeals() {
 
   return (
     <div >
-      <div className=" flex justify-between m-3  md:m-10">
+      <div className="flex justify-between m-3  md:m-10">
         <div>
           <h2 className="raleway pt-5 text-lg font-bold md:text-4xl text-black  font-semi-bold ">
               BEST DEALS
           </h2>
         </div>
-        <div className="flex justify-content md:pt-10 text-blue-600">
+        <div className="raleway flex justify-content md:pt-10 text-blue-600">
             <div>
               <a href="/deals">
               Browse all products 
@@ -35,7 +35,7 @@ export default function BestDeals() {
             </div>
         </div>
       </div>
-      <div className="hidden  md:block m-10 border-1 border-gray-400 rounded-xl p-5">
+      <div className="hidden raleway md:block m-10 border-1 border-gray-400 rounded-xl p-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {deals.map((deal) => (
           <div key={deal.id} className="p-4 rounded-md shadow-lg border border-gray-500">

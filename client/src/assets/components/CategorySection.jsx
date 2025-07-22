@@ -29,7 +29,7 @@ export default function CategorySection() {
 
   return (
     <div className="relative m-10 pb-10">
-      <div className="raleway text-4xl text-black font-semibold flex justify-center mb-6">
+      <div className="raleway font-bold text-4xl text-black  flex justify-center mb-6">
         Shop with Category
       </div>
 
@@ -61,7 +61,7 @@ export default function CategorySection() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-20 w-20 mb-2 object-contain"
+                className="h-20 w-25 mb-2 object-contain"
               />
               <p className="mt-4 text-xl">{item.name}</p>
             </Link>
