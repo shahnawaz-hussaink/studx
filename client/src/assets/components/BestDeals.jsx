@@ -35,7 +35,7 @@ export default function BestDeals() {
             </div>
         </div>
       </div>
-      <div className="hidden md:block m-10 border-1 border-gray-400 rounded-xl p-5">
+      <div className="hidden  md:block m-10 border-1 border-gray-400 rounded-xl p-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {deals.map((deal) => (
           <div key={deal.id} className="p-4 rounded-md shadow-lg border border-gray-500">

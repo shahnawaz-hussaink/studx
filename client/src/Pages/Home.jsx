@@ -1,4 +1,5 @@
 import BestDeals from "../assets/components/BestDeals";
+import CategorySection from "../assets/components/CategorySection";
 import Header from "../assets/components/Header";
 import SiteHighlights from "../assets/components/SiteHighlights";
 import Swiper from "../assets/components/Swiper";
@@ -11,6 +12,7 @@ export default function Home() {
         <Swiper />
         <SiteHighlights/>
         <BestDeals/>
+        <CategorySection/>
       </main>
     </>
   );
