@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const PORT = 3000;
 const deals = require('./data/deals');
+const categoryData = require('./data/categoryData');
 // Fake data
 
 app.use(cors());
@@ -17,6 +18,9 @@ app.get('/', (req, res) => {
 
 app.get('/api/deals', (req, res) => {
   res.json(deals);
+});
+app.get('/api/category',(req,res)=>{
+  res.json(categoryData);
 });
 
 app.listen(PORT, () => {

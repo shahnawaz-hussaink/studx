@@ -1,18 +1,39 @@
 import { MapPin, Info, Headphones, Phone } from "lucide-react";
 import SearchBar from "./SearchBar";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function HeaderTop() {
+
+  const [categories, setCategories] = useState([]);
+  
+    useEffect(() => {
+      fetch("http://localhost:3000/api/category")
+        .then((res) => res.json())
+        .then((data) => {
+          setCategories(data);
+        })
+        .catch((err) => {
+          console.error("Error fetching categories:", err);
+          setCategories([]);
+        });
+    }, []);
+
   return (
     <>
       <div className="w-full bg-white border-b border-gray-200 text-sm lg:text-md">
       <div className="hidden md:flex justify-between items-center px-4 py-3">
         <div className="flex gap-6 items-center">
           <select className="border ml-2 px- py-1 rounded">
-            <option>Select Category</option>
-            <option>Furniture</option>
-            <option>Electronics</option>
-            <option>Stationary</option>
-            <option>Kitchen</option>
+            <option >
+                Select Category
+            </option>
+            {categories.map((category, index) => (
+              <>
+                <option key={index} >
+                  {category.name}
+                </option>
+              </>
+            ))}
           </select>
           <a href="/track" className="flex items-center gap-1">
             <MapPin size={18} /> Track Order

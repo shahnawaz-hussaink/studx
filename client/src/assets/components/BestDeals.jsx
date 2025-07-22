@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import {React, useEffect, useState } from "react";
 import {ArrowRight} from 'lucide-react'
 export default function BestDeals() {
   const [deals, setDeals] = useState([]);

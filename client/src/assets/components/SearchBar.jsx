@@ -1,11 +1,24 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate, Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 
 export default function SearchBar({ searchText, onChange,}) {
   const [selectedCategory, setSelectedCategory] = useState('');
   const navigate = useNavigate(); 
-
+  const [categories, setCategories] = useState([]);
+  
+    useEffect(() => {
+      fetch("http://localhost:3000/api/category")
+        .then((res) => res.json())
+        .then((data) => {
+          setCategories(data);
+        })
+        .catch((err) => {
+          console.error("Error fetching categories:", err);
+          setCategories([]);
+        });
+    }, []);
+  
   const handleSearch = () => {
     if (selectedCategory) {
       navigate(`/category/${selectedCategory.toLowerCase()}`);
@@ -26,12 +39,18 @@ export default function SearchBar({ searchText, onChange,}) {
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
-            <option value="">Category</option>
-            <option>Furniture</option>
-            <option>Electronics</option>
-            <option>Stationary</option>
-            <option>Kitchen</option>
+            <option >
+                Category
+            </option>
+            {categories.map((category, index) => (
+              <>
+                <option key={index} >
+                  {category.name}
+                </option>
+              </>
+            ))}
           </select>
+
 
           <div className="w-px h-6 bg-gray-300 mx-2" />
         </>
