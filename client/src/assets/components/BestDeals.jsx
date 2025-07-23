@@ -7,7 +7,6 @@ export default function BestDeals() {
     fetch("http://localhost:3000/api/deals")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Fetched deals:", data); 
         setDeals(data);
       })
       .catch((err) => {

@@ -10,7 +10,6 @@ export default function FeatureProducts() {
         fetch("http://localhost:3000/api/featured-products")
             .then((res) => res.json())
             .then((data) => {
-                console.log("Fetched deals:", data);
                 setFeatureProduct(data);
             })
             .catch((err) => {
