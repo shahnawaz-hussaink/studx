@@ -24,7 +24,7 @@ export default function BestDeals() {
               BEST DEALS
           </h2>
         </div>
-        <div className="raleway flex justify-content md:pt-10 text-blue-600">
+        <div className="raleway flex justify-content md:pt-10 text-blue-500 hover:text-blue-600">
             <div>
               <a href="/deals">
               Browse all products 

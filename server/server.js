@@ -1,27 +1,25 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const app = express();
 const PORT = 3000;
-const deals = require('./data/deals');
-const categoryData = require('./data/categoryData');
-// Fake data
 
+// Middleware
 app.use(cors());
-
-// Middleware (optional)
 app.use(express.json());
 
-// Routes
+// Import route files
+const dealsRoute = require('./routes/deals');
+const categoryRoute = require('./routes/categories');
+const featuredProductsRoute = require('./routes/featuredProducts');
+
+// Route registration
 app.get('/', (req, res) => {
   res.send('Studx backend is running 🎯');
 });
 
-app.get('/api/deals', (req, res) => {
-  res.json(deals);
-});
-app.get('/api/category',(req,res)=>{
-  res.json(categoryData);
-});
+app.use('/api/deals', dealsRoute);
+app.use('/api/category', categoryRoute);
+app.use('/api/featured-products', featuredProductsRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

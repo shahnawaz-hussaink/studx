@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const deals = require('../data/deals'); // import fake data
+const deals = require('../data/deals');
 
 router.get('/', (req, res) => {
-  res.json(deals); // send fake data as JSON
+  res.json(deals);
 });
 
 module.exports = router;
