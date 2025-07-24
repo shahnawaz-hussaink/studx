@@ -1,6 +1,7 @@
 import BestDeals from "../assets/components/BestDeals";
 import CategorySection from "../assets/components/CategorySection";
 import FeatureProducts from "../assets/components/FeatureProducts";
+import Footer from "../assets/components/Footer";
 import Header from "../assets/components/Header";
 import MacbookSale from "../assets/components/MacbookSale";
 import NewsLetter from "../assets/components/NewsLetter";
@@ -19,6 +20,7 @@ export default function Home() {
         <FeatureProducts/>
         <MacbookSale/>
         <NewsLetter/>
+        <Footer/>
       </main>
     </>
   );

@@ -19,14 +19,14 @@ export default function FeatureProducts() {
     }, []);
 
     return (
-        <section className="raleway w-full block md:flex">
+        <section className="raleway w-full block md:flex ">
             <div>
                 <img
                     src="/Sale/image.png"
                     alt="Featured Sale Product"
                     className="hidden md:block h-full"
                 />
-                <div className="block md:hidden flex justify-center">
+                <div className="block mb-5 md:hidden flex justify-center">
                     <Link to="/">
                         <img
                             src="/Sale/imageCropped.png"
@@ -39,16 +39,16 @@ export default function FeatureProducts() {
             <div className="w-full  flex flex-col mx-2">
                 <div className="flex flex-col gap-4 mb-6">
                     <div className="flex justify-between items-center">
-                        <h2 className="text-xl md:text-4xl font-semibold">
+                        <h2 className="text-sm md:text-4xl font-semibold">
                             Feature Products
                         </h2>
-                        <nav className="flex flex-wrap gap-3 md:gap-5 text-base items-center px-2">
+                        <nav className="flex flex-wrap gap-2 md:gap-5  text-sm md:text-base items-center px-2">
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>All Products</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Laptop</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Books</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Furniture</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Utensils</a>
-                            <a href="" className="flex items-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
+                            <a href="" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
                                 Browse all products <ArrowRight size={16} />
                             </a>
                         </nav>
@@ -66,7 +66,7 @@ export default function FeatureProducts() {
                                 <img
                                 src={product.image}
                                 alt={product.title}
-                                className="w-full h-40 object-contain mb-2"
+                                className="w-full h-30 md:h-40 object-contain mb-2"
                             />
                             <p className="text-sm text-gray-700 ">{product.description}</p>
                             <p className="text-green-600 font-semibold mt-1">₹{product.price}</p>

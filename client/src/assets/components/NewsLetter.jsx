@@ -31,13 +31,13 @@ export default function NewsLetter(){
         <>
             <div className="raleway flex justify-center bg-[#1B6392]">
                 <div className="my-10 w-full max-w-3xl px-6 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">
+                    <h2 className="text-xl md:text-3xl font-bold text-white mb-4">
                     Subscribe to our newsletter
                     </h2>
-                    <p className="text-base text-gray-300 mx-auto max-w-xl text-justify sm:text-center sm:max-w-2xl sm:px-10">
+                    <p className="text-sm md:text-base text-gray-300 mx-auto max-w-xl text-justify sm:text-center sm:max-w-2xl sm:px-10">
                     Subscribe to our newsletter for the latest updates, special offers and expert tips delivered straight to your inbox.
                     </p>
-                    <div className="flex mx-auto w-full max-w-xl rounded overflow-hidden bg-white shadow-sm my-10">
+                    <div className="flex mx-auto w-full max-w-md rounded overflow-hidden bg-white shadow-sm my-10">
                     <input
                         type="text"
                         value={mail}
@@ -54,8 +54,8 @@ export default function NewsLetter(){
                     </button>
                     </div>  
                     
-                    <div className="hidden md:flex justify-center my-4">
-                    <div className="border-b border-gray-400 w-3/4 max-w-xl" />
+                    <div className="flex justify-center my-4">
+                    <div className="border-b border-gray-400 w-full md:w-2/4 max-w-md" />
                     </div>
 
                     <div className="flex justify-center gap-6 text-white mt-4">
