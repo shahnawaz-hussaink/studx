@@ -28,7 +28,9 @@ app.use('/api/category', categoryRoute);
 app.use('/api/featured-products', featuredProductsRoute);
 
 
-// mogoose connection for fetching deals data
+
+
+// mogoose connection for data fetching
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -39,6 +41,11 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
 
+
+
+
+
+// listeing by express...
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

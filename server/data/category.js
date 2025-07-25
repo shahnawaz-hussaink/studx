@@ -1,5 +1,5 @@
 
-const  categoryData = [
+const  category = [
         { name: "Phones", image: "/CategoryImages/Mobile.png" },
         { name: "Laptops", image: "/CategoryImages/Laptop.png" },
         { name: "Chairs", image: "/CategoryImages/Chair.png" },
@@ -11,4 +11,4 @@ const  categoryData = [
         { name: "Fitness", image: "/CategoryImages/Fitness.png" },
         { name: "Chargers", image: "/CategoryImages/Chargers.png" },
     ];
-module.exports = categoryData;
+module.exports = category;
