@@ -39,7 +39,7 @@ export default function BestDeals() {
         {deals.map((deal) => (
           <div key={deal.id} className="p-4 rounded-md shadow-lg border border-gray-500">
             <img src={deal.image} alt={deal.title} className="w-100 h-40 object-contain" />
-            <h2 className="text-lg font-bold">{deal.title}</h2>
+            <h2 className="text-lg font-bold">{deal.id}</h2>
             <p>{deal.description}</p>
             <p className="text-green-600 font-semibold">₹{deal.price}</p>
           </div>
