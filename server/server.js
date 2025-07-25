@@ -16,7 +16,7 @@ app.use(express.json());
 // Import route files
 const dealsRoute = require('./routes/deals');
 const categoryRoute = require('./routes/categories');
-const featuredProductsRoute = require('./routes/featuredProducts');
+const featuredProductsRoute = require('./routes/featuredProduct');
 
 // Route registration
 app.get('/', (req, res) => {

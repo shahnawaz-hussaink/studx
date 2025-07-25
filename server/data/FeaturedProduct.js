@@ -1,5 +1,5 @@
 
-const FeaturesProduct = [
+const featuredProduct = [
   {
     id: 11,
     description: "Compact and stylish wooden bookshelf that holds up to 50 books. Ideal for small rooms, study corners, or cozy reading nooks.",
@@ -50,4 +50,4 @@ const FeaturesProduct = [
   }
 ];
 
-module.exports = FeaturesProduct;
+module.exports = featuredProduct;
