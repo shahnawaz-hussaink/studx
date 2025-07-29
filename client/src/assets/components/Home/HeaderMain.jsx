@@ -3,6 +3,7 @@ import { useState } from "react";
 import SearchBar from "./SearchBar.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import '../../Styles/Header.css'
+import {Link } from 'react-router-dom'
 
 export default function HeaderMain({showSearchBar=true}) {
   const [searchText, setSearchText] = useState("");
@@ -33,7 +34,7 @@ export default function HeaderMain({showSearchBar=true}) {
         <div className="hidden md:flex items-center gap-5 ">
           <a href="/cart" className="text-white hover:text-gray-300"><ShoppingCart size={28} /></a>
           <a href="/wishlist" className="text-white hover:text-gray-300"><Heart size={28} /></a>
-          <a href="/login" className="text-white hover:text-gray-300"><User size={28} /></a>
+          <Link to="/login" className="text-white hover:text-gray-300"><User size={28} /></Link>
         </div>
 
         <div className="md:hidden">
