@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import React, { useEffect, useState, useRef } from "react";
 import {Link} from 'react-router-dom'
 
-export default function HeaderTop() {
+export default function HeaderLow() {
 
   const [categories, setCategories] = useState([]);
   

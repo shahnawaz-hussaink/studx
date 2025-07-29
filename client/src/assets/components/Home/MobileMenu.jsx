@@ -7,7 +7,7 @@ export default function MobileMenu({ children }) {
       <div className="flex justify-around text-white">
         <a href="/"><ShoppingCart size={28} /></a>
         <a href="/"><Heart size={28} /></a>
-        <a href="/"><User size={28} /></a>
+        <a href="/login"><User size={28} /></a>
       </div>
     </div>
   );

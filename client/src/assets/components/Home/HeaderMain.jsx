@@ -2,9 +2,9 @@ import { ShoppingCart, Heart, User, Menu, X } from "lucide-react";
 import { useState } from "react";
 import SearchBar from "./SearchBar.jsx";
 import MobileMenu from "./MobileMenu.jsx";
-import '../Styles/Header.css'
+import '../../Styles/Header.css'
 
-export default function HeaderMain() {
+export default function HeaderMain({showSearchBar=true}) {
   const [searchText, setSearchText] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,17 +21,19 @@ export default function HeaderMain() {
         </a>
 
         <div className="hidden md:flex items-center w-1/2 px-5">
-          <SearchBar
-            searchText={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            onSearch={handleSearch}
-          />
+          {showSearchBar && (
+            <SearchBar
+              searchText={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              onSearch={handleSearch}
+            />
+          )}
         </div>
 
         <div className="hidden md:flex items-center gap-5 ">
           <a href="/cart" className="text-white hover:text-gray-300"><ShoppingCart size={28} /></a>
           <a href="/wishlist" className="text-white hover:text-gray-300"><Heart size={28} /></a>
-          <a href="/user" className="text-white hover:text-gray-300"><User size={28} /></a>
+          <a href="/login" className="text-white hover:text-gray-300"><User size={28} /></a>
         </div>
 
         <div className="md:hidden">

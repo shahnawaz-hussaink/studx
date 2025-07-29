@@ -1,5 +1,5 @@
-import HeaderMain from "./HeaderMain";
-import HeaderLow from "./HeaderLow";
+import HeaderMain from "../Home/HeaderMain";
+import HeaderLow from "../Home/HeaderLow";
 
 
 export default function Header() {

@@ -22,7 +22,6 @@ export default function NewsLetter(){
       alert("Please enter a valid email address.");
       return;
     }
-
     alert("You are subscribing to Stux.");
     setMail("");
   };
