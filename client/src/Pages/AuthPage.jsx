@@ -6,7 +6,6 @@ import {Routes, Route , BrowserRouter } from 'react-router-dom';
 export default function AuthPage(){
     return (
         <>
-            <HeaderMain showSearchBar={false}/>
             <LoginForm/>
             
         </>
