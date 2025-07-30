@@ -38,7 +38,7 @@ export default function SignupForm() {
     return;
   }
 
-  // 🔥 Send data to backend
+  // Sending data to backend
   try {
     const response = await fetch("http://localhost:3000/api/auth/signup", {
       method: "POST",
@@ -77,9 +77,9 @@ export default function SignupForm() {
       
 
       <div className="raleway flex flex-col md:flex-row w-full min-h-screen">
-        <div className="w-full md:w-2/4 flex justify-center h-screen ">
-          <div className="w-full p-5 md:p-10">
-            <div className="pb-6 md:pb-10">
+        <div className="w-full md:w-2/4 flex justify-center h-screen py-10 px-5">
+          <div className="w-full rounded-xl shadow-2xl p-5 md:p-15">
+            <div className="pb-2 md:pb-10">
               <h1 className="text-2xl md:text-3xl font-black py-3">Sign up</h1>
               <p className="text-base md:text-lg text-gray-600">
                 Sign up to buy, sell, and save more — all in one place.
@@ -87,7 +87,7 @@ export default function SignupForm() {
             </div>
 
             <form className="w-full">
-              <div className="my-4 md:my-5">
+              <div className="my-1 md:my-2">
                 <label htmlFor="name" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                   Full Name
                 </label>
@@ -100,7 +100,7 @@ export default function SignupForm() {
                   className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
               </div>
-              <div className="my-4 md:my-5">
+              <div className="my-1 md:my-2">
                 <label htmlFor="email" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                   E-mail
                 </label>
@@ -114,7 +114,7 @@ export default function SignupForm() {
                 />
               </div>
 
-              <div className="my-4 md:my-5">
+              <div className="my-1 md:my-2">
                 <label htmlFor="password" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                   Password
                 </label>
@@ -128,7 +128,7 @@ export default function SignupForm() {
                 />
               </div>
 
-              <div className="my-4 md:my-5">
+              <div className="my-1 md:my-2">
                 <label htmlFor="confirm-password" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                   Confirm Password
                 </label>
@@ -138,11 +138,11 @@ export default function SignupForm() {
                   placeholder="abc#123"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
+                  className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-1 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
               </div>
 
-              <div className="flex items-center space-x-3 my-4">
+              <div className="flex items-center space-x-3 my-1">
                 <input
                   id="terms"
                   type="checkbox"
@@ -158,7 +158,7 @@ export default function SignupForm() {
 
             <div className="mt-6">
               <button
-                className="w-full bg-[#1B6392] py-3 md:py-4 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl"
+                className="w-full bg-[#1B6392] py-1 md:py-2 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl"
                 onClick={handleOnClick}
               >
                 Sign up
