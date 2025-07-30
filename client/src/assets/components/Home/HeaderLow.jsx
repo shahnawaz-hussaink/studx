@@ -29,11 +29,9 @@ export default function HeaderLow() {
                 Select Category
             </option>
             {categories.map((category, index) => (
-              <>
                 <option key={index} >
                   {category.name}
                 </option>
-              </>
             ))}
           </select>
           <a href="/track" className="flex items-center gap-1">

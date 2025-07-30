@@ -36,8 +36,8 @@ export default function BestDeals() {
       </div>
       <div className="hidden raleway md:block m-10 border-1 border-gray-400 rounded-xl p-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
-        {deals.map((deal) => (
-          <div key={deal.id} className="p-4 rounded-md shadow-lg border border-gray-500">
+        {deals.map((deal,index) => (
+          <div key={index} className="p-4 rounded-md shadow-lg border border-gray-500">
             <img src={deal.image} alt={deal.title} className="w-100 h-40 object-contain" />
             <h2 className="text-lg font-bold">{deal.id}</h2>
             <p>{deal.description}</p>
@@ -48,8 +48,8 @@ export default function BestDeals() {
       </div>
       <div className="block sm:hidden p-5">
         <div className="grid grid-cols-3 gap-4 ">
-        {deals.map((deal) => (
-          <div key={deal.id} className="p-1  shadow-lg ">
+        {deals.map((deal,index) => (
+          <div key={index} className="p-1  shadow-lg ">
             <img src={deal.image} alt={deal.title}className="w-full h-40 object-cover"/>
             <p className="text-green-600 font-semibold">₹{deal.price}</p>
           </div>

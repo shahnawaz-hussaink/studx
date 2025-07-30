@@ -42,12 +42,10 @@ export default function SearchBar({ searchText, onChange,}) {
             <option >
                 Category
             </option>
-            {categories.map((category) => (
-              <>
-                <option key={category.id} >
+            {categories.map((category,index) => (
+                <option key={index} >
                   {category.name}
                 </option>
-              </>
             ))}
           </select>
 

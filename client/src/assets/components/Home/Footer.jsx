@@ -81,14 +81,21 @@ export default function Footer() {
       <div className="flex justify-center">
             <div className="border-b border-gray-600 w-full md:w-full" />
         </div>
-            <div className="text-center py-5">
-                <p className="text-gray-400">
-                    Brewed with code by &nbsp;
-                    <a href="https://portfolio2-0-pi-nine.vercel.app/" className="text-yellow-400 hover:underline underline-offset-3">
-                    Shahnawaz-Hussain
-                    </a> 
-                </p>
-            </div>
+        <div className="text-center py-5 text-sm md:text-base">
+          <p className="text-gray-400">
+            © 2025&nbsp;|&nbsp;
+            Developed by&nbsp;
+            <a
+              href="https://portfolio2-0-pi-nine.vercel.app/"
+              className="text-yellow-400 hover:underline underline-offset-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Shahnawaz Hussain
+            </a>
+          </p>
+        </div>
+
     </footer>
   );
 }
