@@ -18,7 +18,7 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Studx backend is running 🎯');
+  res.send(`Studx backend is running on port ${PORT}`);
 });
 
 app.use('/api/deals', dealsRoute);
