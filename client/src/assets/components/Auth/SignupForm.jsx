@@ -11,30 +11,47 @@ export default function SignupForm() {
 
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
-    if (!name || !email || !password || !confirmPassword) {
-      alert("Please fill in all fields.");
-      return;
-    }
+  const handleOnClick = async () => {
+  if (!name || !email || !password || !confirmPassword) {
+    alert("Please fill in all fields.");
+    return;
+  }
 
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!isValidEmail) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!isValidEmail) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
-    if (password.length < 6) {
-      alert("Password should be at least 6 characters.");
-      return;
-    }
+  if (password.length < 6) {
+    alert("Password should be at least 6 characters.");
+    return;
+  }
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match.");
-      return;
-    }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
 
-    if (!agreed) {
-      alert("You must agree to the Terms & Conditions.");
+  if (!agreed) {
+    alert("You must agree to the Terms & Conditions.");
+    return;
+  }
+
+  // 🔥 Send data to backend
+  try {
+    const response = await fetch("http://localhost:3000/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, email, password })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert(data.error || "Something went wrong.");
       return;
     }
 
@@ -46,8 +63,14 @@ export default function SignupForm() {
     setConfirmPassword("");
     setAgreed(false);
 
-    navigate("/");
-  };
+    navigate("/"); // go to home page
+
+  } catch (error) {
+    console.error("Signup Error:", error);
+    alert("Server error, please try again later.");
+  }
+};
+
 
   return (
     <>
