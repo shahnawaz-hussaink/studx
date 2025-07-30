@@ -1,7 +1,16 @@
-# 🎓 StudX – Campus Exchange Hub
+# 🎓 STUDx – Campus Exchange Hub
 
-StudX is a full-stack marketplace platform built with the MERN stack, designed specifically for **college students** to buy and sell second-hand academic and living essentials like books, furniture, electronics, and more within their **local campus community**.
+STUDx is a full-stack marketplace platform built with the MERN stack, designed specifically for **college students** to buy and sell second-hand academic and living essentials like books, furniture, electronics, and more within their **local campus community**.
 
+
+---
+
+
+### 🌐 STUDx - Campus Exchange Hub
+[![Screenshot](STUDx.png)](https://github.com/shahnawaz-hussaink/studx)
+
+
+---
 ## 📌 Features
 
 - 👩‍🎓 **Student Access** via email id
@@ -21,7 +30,6 @@ StudX is a full-stack marketplace platform built with the MERN stack, designed s
 | Frontend   | React.js, Tailwind CSS, Vite   |
 | Backend    | Node.js, Express.js            |
 | Database   | MongoDB (Mongoose)             |
-| Auth       | JWT                            |
 
 ---
 
