@@ -34,7 +34,7 @@ export default function LoginForm() {
       return;
     }
 
-    alert(data.message );
+    alert(`${data.message} ${data.user.name} ❤️`);
     setEmail("");
     setPassword("");
     navigate("/");
