@@ -57,7 +57,7 @@ export default function FeatureProducts() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     {FeatureProduct.map((product,index) => (
                         <Link key={index}
-                        to={`/api/${product.id}`}
+                        to={`/api/product/${product._id}`}
                         >
                             <div
                             key={product.id}
