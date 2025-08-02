@@ -34,15 +34,15 @@ export default function AllProducts(){
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 pb-10">
                     {FeatureProduct.map((product) => (
                         <Link key={product._id} to={`/api/product/${product._id}`}>
-                        <div className="bg-white p-4 rounded-md shadow hover:shadow-xl border border-gray-300 transition-all duration-300 h-80 flex flex-col justify-between">
+                        <div className="bg-white p-4 rounded-md shadow hover:shadow-xl border border-gray-300 transition-all duration-300 h-full md:h-80 flex flex-col justify-between">
                             <img
                             src={product.image}
                             alt={product.title}
                             className="w-full h-32 md:h-40 object-contain mb-3"
                             />
                             <div className="flex flex-col flex-grow">
-                            <p className="text-sm text-gray-700 font-medium">{product.title}</p>
-                            <p className="text-xs text-gray-500 mt-1">{product.description}</p>
+                            <p className="text-md text-gray-700 font-medium">{product.title}</p>
+                            <p className="text-sm text-gray-500 mt-1">{product.description}</p>
                             <p className="text-green-600 font-bold text-base mt-auto">₹{product.price}</p>
                             </div>
                         </div>

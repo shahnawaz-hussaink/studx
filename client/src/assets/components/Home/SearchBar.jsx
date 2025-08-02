@@ -31,40 +31,38 @@ export default function SearchBar({ searchText, onChange,}) {
   };
 
   return (
-    <div className="flex items-center h-12 w-full md:w-full bg-white border border-gray-300 px-4 py-2 rounded-full shadow-sm">
-      { (
-        <>
-          <select
-            className="text-sm bg-transparent pr-2 focus:outline-none"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option >
-                Category
-            </option>
-            {categories.map((category,index) => (
-                <option key={index} >
-                  {category.name}
-                </option>
-            ))}
-          </select>
+    <div className="flex items-center h-12 w-full bg-white border border-gray-300 px-3 py-2 rounded-full shadow-sm overflow-hidden my-2">
+  <>
+    <select
+      className="text-sm bg-transparent pr-2 focus:outline-none whitespace-nowrap"
+      value={selectedCategory}
+      onChange={(e) => setSelectedCategory(e.target.value)}
+    >
+      <option>Category</option>
+      {categories.map((category, index) => (
+        <option key={index}>{category.name}</option>
+      ))}
+    </select>
 
+    <div className="w-px h-6 bg-gray-300 mx-2" />
+  </>
 
-          <div className="w-px h-6 bg-gray-300 mx-2" />
-        </>
-      )}
+  <input
+    type="text"
+    placeholder="Search for anything..."
+    value={searchText}
+    onChange={onChange}
+    className="flex-grow min-w-0 py-1 text-gray-700 bg-transparent focus:outline-none"
+  />
 
-      <input
-        type="text"
-        placeholder="Search for anything..."
-        value={searchText}
-        onChange={onChange}
-        className="flex-grow py-1 text-gray-700 bg-transparent focus:outline-none"
-      />
+  <button
+    onClick={handleSearch}
+    type="button"
+    className="text-gray-500 hover:text-black flex-shrink-0"
+  >
+    <Search size={22} />
+  </button>
+</div>
 
-      <button onClick={handleSearch} type="button" className="text-gray-500 hover:text-black">
-        <Search size={22} />
-      </button>
-    </div>
   );
 }

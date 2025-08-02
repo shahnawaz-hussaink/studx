@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import React, { useEffect, useState, useRef } from "react";
 import {Link} from 'react-router-dom'
 
-export default function HeaderLow() {
+export default function HeaderLow({showSearchBar=true}) {
 
   const [categories, setCategories] = useState([]);
   
@@ -57,8 +57,8 @@ export default function HeaderLow() {
       </div>
       
     </div>
-    <div className="flex md:hidden w-full p-5">
-      <SearchBar/>
+    <div className="flex md:hidden w-full px-5">
+      {showSearchBar && (<SearchBar showSearchBar={true}/>)}
     </div>
     </>
   );
