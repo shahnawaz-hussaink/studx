@@ -193,7 +193,7 @@ const featuredProduct = [
     title: "Noise Cancelling Headphones",
     description: "High-fidelity wireless headphones with ANC",
     price: 2499,
-    image: "https://example.com/images/headphones.jpg",
+    image: "https://rukminim2.flixcart.com/image/832/832/xif0q/headphone/o/h/f/-original-imahdxvsuftg7njp.jpeg?q=70&crop=false",
     details: [
       "Active Noise Cancellation up to 30dB",
       "40mm drivers for deep bass",
@@ -214,7 +214,7 @@ const featuredProduct = [
   title: "Ergonomic Study Chair",
   description: "Adjustable and cushioned chair ideal for long study sessions",
   price: 3199,
-  image: "https://example.com/images/study-chair.jpg",
+  image: "https://thesleepcompany.in/cdn/shop/files/1_52578784-331e-40b0-8f56-4c767f3cfef1.webp?v=1753711047&width=860",
   details: [
     "Mesh back support with lumbar adjustment",
     "360° swivel wheels",
@@ -235,7 +235,7 @@ const featuredProduct = [
   title: "Scientific Calculator",
   description: "Multi-functional calculator suitable for engineering students",
   price: 899,
-  image: "https://example.com/images/calculator.jpg",
+  image: "https://vlebazaar.in/image/cache/catalog/Casio-FX-82MS-2nd-Gen-Non-Programmable-Scientific-Calculator-240-Functio/Casio-FX-82MS-2nd-Gen-Non-Programmable-Scientific-Calculator-240-Functions-and-2-1100x1100.jpg",
   details: [
     "240+ functions",
     "Dual power: solar and battery",
@@ -256,7 +256,7 @@ const featuredProduct = [
   title: "Graph Paper Notebook",
   description: "A4 size graph notebook with thick pages",
   price: 179,
-  image: "https://example.com/images/graph-notebook.jpg",
+  image: "https://cdn.zeptonow.com/production/ik-seo/tr:w-640,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/414f1c7a-82fd-4d3f-8411-d4e7aee7b45c/Ranka-Supremo-Graph-Book-Ruled-32-Pages-Assorted.jpg",
   details: [
     "80 GSM thick paper",
     "Single-line + Graph combo",
@@ -277,7 +277,7 @@ const featuredProduct = [
   title: "External Hard Drive - 1TB",
   description: "Portable HDD with USB 3.0 interface for fast data transfer",
   price: 3799,
-  image: "https://example.com/images/hard-drive.jpg",
+  image: "https://m.media-amazon.com/images/I/41eFUZh+nHL.jpg",
   details: [
     "1TB storage capacity",
     "USB 3.0 and backward compatible with USB 2.0",
@@ -298,7 +298,7 @@ const featuredProduct = [
   title: "Desk Organizer Set",
   description: "5-in-1 set to keep your study desk clutter-free",
   price: 549,
-  image: "https://example.com/images/desk-organizer.jpg",
+  image: "https://m.media-amazon.com/images/I/41VSiPyZlzL.jpg",
   details: [
     "Includes pen stand, tray, sticky notes holder",
     "Made from recycled plastic",
@@ -319,7 +319,7 @@ const featuredProduct = [
   title: "Digital Drawing Tablet",
   description: "Perfect for online classes, note-taking, and creative sketches",
   price: 2499,
-  image: "https://example.com/images/drawing-tablet.jpg",
+  image: "https://m.media-amazon.com/images/I/51QoBaZBsjL._AC_SX296_SY426_FMwebp_QL65_.jpg",
   details: [
     "8192 pressure levels stylus",
     "Battery-free pen",
@@ -340,7 +340,7 @@ const featuredProduct = [
   title: "Rechargeable Desk Lamp",
   description: "Eye-care LED lamp with adjustable brightness levels",
   price: 699,
-  image: "https://example.com/images/desk-lamp.jpg",
+  image: "https://m.media-amazon.com/images/I/71hRle2Q7tL._AC_SX296_SY426_FMwebp_QL65_.jpg",
   details: [
     "3 brightness modes",
     "Touch control panel",
@@ -361,7 +361,7 @@ const featuredProduct = [
   title: "Portable Whiteboard",
   description: "Double-sided mini whiteboard for quick notes and study plans",
   price: 449,
-  image: "https://example.com/images/whiteboard.jpg",
+  image: "https://m.media-amazon.com/images/I/51Hque+SehL._AC_SX296_SY426_FMwebp_QL65_.jpg",
   details: [
     "Magnetic and rewritable",
     "Comes with marker and duster",
@@ -382,7 +382,7 @@ const featuredProduct = [
   title: "Fitness Resistance Bands Set",
   description: "Pack of 5 resistance bands for home workouts",
   price: 599,
-  image: "https://example.com/images/resistance-bands.jpg",
+  image: "https://m.media-amazon.com/images/I/81ZbU6VSK8L._AC_SX296_SY426_FMwebp_QL65_.jpg",
   details: [
     "Different resistance levels from light to extra heavy",
     "Made of 100% natural latex",
@@ -403,7 +403,7 @@ const featuredProduct = [
   title: "Laptop Cooling Pad",
   description: "Silent cooling pad with 5 fans for overheating laptops",
   price: 1099,
-  image: "https://example.com/images/cooling-pad.jpg",
+  image: "https://m.media-amazon.com/images/I/81pQi2N6-XL._AC_SX296_SY426_FMwebp_QL65_.jpg",
   details: [
     "5 ultra-quiet fans with adjustable speed",
     "Supports laptops up to 17 inches",

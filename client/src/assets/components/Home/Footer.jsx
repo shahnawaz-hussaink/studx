@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 raleway text-white">
       <div className="flex flex-col md:flex-row md:justify-center md:gap-25 px-6 py-10 gap-10">
-        {/* Brand Section */}
         <div className="w-full md:w-auto md:text-center md:text-left">
           <a href="/">
             <h3 className="text-4xl font-bold">STUDx</h3>
@@ -20,7 +19,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Top Category */}
         <div className="w-full md:w-auto md:text-center md:text-left">
           <h2 className="text-xl">TOP CATEGORY</h2>
           <ul className="text-gray-400 my-5 space-y-2">
@@ -41,7 +39,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Quick Links */}
         <div className="w-full md:w-auto md:text-center md:text-left">
           <h2 className="text-xl">QUICK LINKS</h2>
           <ul className="text-gray-400 my-5 space-y-2">

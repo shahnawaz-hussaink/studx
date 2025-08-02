@@ -48,7 +48,7 @@ export default function FeatureProducts() {
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Books</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Furniture</a>
                             <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Utensils</a>
-                            <a href="" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
+                            <a href="/all-products" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
                                 Browse all products <ArrowRight size={16} />
                             </a>
                         </nav>
