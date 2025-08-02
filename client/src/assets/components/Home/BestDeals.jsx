@@ -1,5 +1,6 @@
 import {React, useEffect, useState } from "react";
 import {ArrowRight} from 'lucide-react'
+import { Link } from "react-router-dom";
 export default function BestDeals() {
   const [deals, setDeals] = useState([]);
 
@@ -35,17 +36,24 @@ export default function BestDeals() {
         </div>
       </div>
       <div className="hidden raleway md:block m-10 border-1 border-gray-400 rounded-xl p-5">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
-        {deals.map((deal,index) => (
-          <div key={index} className="p-4 rounded-md shadow-lg border border-gray-500">
-            <img src={deal.image} alt={deal.title} className="w-100 h-40 object-contain" />
-            <h2 className="text-lg font-bold">{deal.id}</h2>
-            <p>{deal.description}</p>
-            <p className="text-green-600 font-semibold">₹{deal.price}</p>
-          </div>
-        ))}
-      </div>
-      </div>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {deals.map((deal, index) => (
+      <Link to={`/api/product/${deal._id}`} key={deal._id } className="block">
+        <div className="h-full p-4 rounded-md shadow-lg border border-gray-500 hover:shadow-xl transition flex flex-col justify-between">
+          <img
+            src={deal.image}
+            alt={deal.title}
+            className="w-full h-40 object-contain mb-2"
+          />
+          <h2 className="text-lg font-bold">{deal.title}</h2>
+          <p className="text-sm text-gray-600 flex-grow">{deal.description}</p>
+          <p className="text-green-600 font-semibold ">₹{deal.price}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
       <div className="block sm:hidden p-5">
         <div className="grid grid-cols-3 gap-4 ">
         {deals.map((deal,index) => (
