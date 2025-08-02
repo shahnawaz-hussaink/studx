@@ -134,7 +134,7 @@ export default function ProductDetails() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 mt-6 p-5 w-3/4 justify-items-start">
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 p-5 md:w-3/4 justify-items-start">
               <button className="cursor-pointer w-full px-4 py-2 font-black text-black bg-yellow-400 rounded-md opacity-80 hover:opacity-100">
                 Buy Now
               </button>
