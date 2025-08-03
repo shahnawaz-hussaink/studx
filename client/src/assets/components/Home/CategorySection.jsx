@@ -28,20 +28,20 @@ export default function CategorySection() {
   };
 
   return (
-    <div className="relative m-10 pb-10">
-      <div className="raleway font-bold text-4xl text-black  flex justify-center mb-6">
+    <div className="relative md:m-10 pb-10">
+      <div className="raleway font-bold text-xl md:text-4xl text-black  flex justify-center my-6">
         Shop with Category
       </div>
 
       <button
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 shadow-md rounded-full p-2 z-10 hover:bg-orange-600"
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 shadow-md rounded-full md:p-2 z-10 hover:bg-orange-600"
         onClick={() => scroll("left")}
       >
         <ArrowLeft color="white" />
       </button>
 
       <button
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 shadow-md rounded-full p-2 z-10 hover:bg-orange-600"
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 shadow-md rounded-full md:p-2 z-10 hover:bg-orange-600"
         onClick={() => scroll("right")}
       >
         <ArrowRight color="white" />
@@ -56,14 +56,14 @@ export default function CategorySection() {
             <Link
               key={index}
               to={`/category/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="w-56 h-52 border border-gray-300 rounded-md snap-center raleway text-lg font-medium shrink-0 text-center flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
+              className=" w-30 h-40 md:w-56 md:h-52 border border-gray-300 rounded-md snap-center raleway text-lg font-medium shrink-0 text-center flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
             >
               <img
                 src={item.image}
                 alt={item.name}
                 className="h-20 w-25 mb-2 object-contain"
               />
-              <p className="mt-4 text-xl">{item.name}</p>
+              <p className="mt-4 md:text-xl">{item.name}</p>
             </Link>
           ))}
         </div>

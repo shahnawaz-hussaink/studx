@@ -19,12 +19,12 @@ export default function FeatureProducts() {
     }, []);
 
     return (
-        <section className="raleway w-full block md:flex ">
+        <section className=" w-full block md:flex ">
             <div>
                 <img
                     src="/Sale/image.png"
                     alt="Featured Sale Product"
-                    className="hidden md:block h-full"
+                    className="hidden md:block h-full cursor-not-allowed"
                 />
                 <div className="block mb-5 md:hidden flex justify-center">
                     <Link to="/">
@@ -36,25 +36,25 @@ export default function FeatureProducts() {
                     </Link>
                 </div>
             </div>
-            <div className="w-full  flex flex-col mx-2">
+            <div className="w-full  flex flex-col p-2">
                 <div className="flex flex-col gap-4 mb-6">
                     <div className="flex justify-between items-center">
-                        <h2 className="text-sm md:text-4xl font-semibold">
+                        <h2 className="raleway text-xl md:text-4xl font-semibold">
                             Feature Products
                         </h2>
-                        <nav className="flex flex-wrap gap-2 md:gap-5  text-sm md:text-base items-center px-2">
-                            <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>All Products</a>
-                            <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Laptop</a>
-                            <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Books</a>
-                            <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Furniture</a>
-                            <a href="" className='hover:text-orange-400 hover:underline underline-offset-8'>Utensils</a>
+                        <nav className="raleway flex flex-wrap gap-2 md:gap-5  text-sm md:text-base items-center px-2">
+                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>All Products</a>
+                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Laptop</a>
+                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Books</a>
+                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Furniture</a>
+                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Utensils</a>
                             <a href="/all-products" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
                                 Browse all products <ArrowRight size={16} />
                             </a>
                         </nav>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
                     {FeatureProduct.slice(0, 9).map((product) => (
                         <Link key={product._id}
                         to={`/api/product/${product._id}`}
@@ -68,8 +68,8 @@ export default function FeatureProducts() {
                                 alt={product.title}
                                 className="w-full h-30 md:h-40 object-contain mb-2"
                             />
-                            <p className="text-sm text-gray-700 ">{product.description}</p>
-                            <p className="text-green-600 font-semibold mt-1">₹{product.price}</p>
+                            <p className=" raleway line-clamp-5  text-md text-gray-700 ">{product.description}</p>
+                            <p className="text-xl text-green-600 font-semibold mt-5 md:mt-2">₹{product.price}</p>
                         </div>
                         </Link>
                     ))}

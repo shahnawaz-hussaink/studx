@@ -57,7 +57,7 @@ export default function SiteHighlights() {
                     </div>
                     <div className="m-3">
                         <p className="text-black font-semibold">BEST PRICE</p>
-                        <p className="text-sm text-gray-500">Competitive prices guaranteed</p>
+                        <p className="text-sm text-gray-500">Low prices guaranteed</p>
                     </div>
                 </div>
             </div>

@@ -30,8 +30,8 @@ export default function Footer() {
             <li><a href="">Mini Fridges</a></li>
             <li>
               <a
-                href=""
-                className="flex items-center justify-center md:justify-start gap-1 text-yellow-400 hover:underline underline-offset-8 hover:text-yellow-500"
+                href="/all-products"
+                className="flex items-center justify-center justify-start gap-1 text-yellow-400 hover:underline underline-offset-8 hover:text-yellow-500"
               >
                 Browse all products <ArrowRight size={16} />
               </a>
@@ -52,20 +52,20 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Download App */}
         <div className="w-full md:w-auto md:text-center md:text-left">
           <h2 className="text-xl">DOWNLOAD APP</h2>
 
-          {/* Google Play */}
-          <div className="flex justify-center md:justify-start gap-3 p-2 rounded-sm bg-gray-700 my-4">
-            <img src="/Download/playStore.png" alt="Play store" className="w-10" />
-            <div>
-              <p className="text-gray-200 text-sm">Get it now</p>
-              <h2 className="text-white text-lg">Google Play</h2>
+          <Link to="https://play.google.com/store/games?hl=en_IN" target="_blank" className="cursor-pointer">
+            <div className="flex justify-center md:justify-start gap-3 p-2 rounded-sm bg-gray-700 my-4">
+              <img src="/Download/playStore.png" alt="Play store" className="w-10" />
+              <div>
+                <p className="text-gray-200 text-sm">Get it now</p>
+                <h2 className="text-white text-lg">Google Play</h2>
+              </div>
             </div>
-          </div>
+          </Link>
 
-          {/* App Store */}
+          <Link to="https://www.apple.com/in/app-store" target="_blank" className="cursor-pointer">
           <div className="flex justify-center md:justify-start gap-3 p-2 rounded-sm bg-gray-700">
             <img src="/Download/apple.png" alt="App store" className="w-10" />
             <div>
@@ -73,6 +73,8 @@ export default function Footer() {
               <h2 className="text-white text-lg">App Store</h2>
             </div>
           </div>
+          </Link>
+
         </div>
       </div>
       <div className="flex justify-center">

@@ -52,7 +52,7 @@ export default function SearchBar({ searchText, onChange,}) {
     placeholder="Search for anything..."
     value={searchText}
     onChange={onChange}
-    className="flex-grow min-w-0 py-1 text-gray-700 bg-transparent focus:outline-none"
+    className="truncate flex-grow min-w-0 py-1 text-gray-700 bg-transparent focus:outline-none"
   />
 
   <button

@@ -18,22 +18,21 @@ export default function BestDeals() {
 
   return (
     <div>
-      <div className="flex justify-between m-3  md:m-10">
+      <div className="flex justify-between m-5  md:m-10">
         <div>
-          <h2 className="raleway pt-5 text-lg font-bold md:text-4xl text-black  font-semi-bold ">
+          <h2 className="raleway md:pt-5 text-xl font-bold md:text-4xl text-black  font-semi-bold ">
             BEST DEALS
           </h2>
         </div>
         <div className="raleway flex justify-content md:pt-10 text-blue-500 hover:text-blue-600">
           <div>
-            <a href="/deals">Browse all products</a>
-          </div>
-          <div className="pt-0.5">
-            <ArrowRight size={20} />
+            <a href="/all-products" className="flex items-center text-center gap-1 md:text-xl text-blue-600 hover:underline underline-offset-8">
+                                            Browse all products <ArrowRight size={16} />
+             </a> 
           </div>
         </div>
       </div>
-      <div className="hidden raleway md:block m-10 border-1 border-gray-400 rounded-xl p-5">
+      <div className="hidden  md:block m-10 border-1 border-gray-400 rounded-xl p-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {deals.map((deal, index) => (
             <Link
@@ -47,27 +46,27 @@ export default function BestDeals() {
                   alt={deal.title}
                   className="w-full h-40 object-contain mb-2"
                 />
-                <h2 className="text-lg font-bold">{deal.title}</h2>
-                <p className="text-sm text-gray-600 flex-grow">
+                <h2 className="raleway text-lg font-bold">{deal.title}</h2>
+                <p className=" raleway text-sm text-gray-600 flex-grow">
                   {deal.description}
                 </p>
-                <p className="text-green-600 font-semibold ">₹{deal.price}</p>
+                <p className="text-xl text-green-600 font-semibold pt-2">₹{deal.price}</p>
               </div>
             </Link>
           ))}
         </div>
       </div>
 
-      <div className="block sm:hidden p-5">
-        <div className="grid grid-cols-3 gap-4 ">
-          {deals.map((deal, index) => (
-            <div key={index} className="p-1  shadow-lg ">
+      <div className="block sm:hidden p-2">
+        <div className="grid grid-cols-2 gap-4 ">
+          {deals.slice(0,6).map((deal, index) => (
+            <div key={index} className="shadow-lg rounded-md">
               <img
                 src={deal.image}
                 alt={deal.title}
                 className="w-full h-40 object-cover"
               />
-              <p className="text-green-600 font-semibold">₹{deal.price}</p>
+              <p className="text-green-600 font-semibold text-center py-2">₹{deal.price}</p>
             </div>
           ))}
         </div>
