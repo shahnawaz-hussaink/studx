@@ -18,7 +18,7 @@ router.get("/", async(req,res)=>{
     const category = await Category.find();
     res.json(category);
   }
-  catch{
+  catch(error){
     res.status(500).json({ message: "Error fetching deals", error });
   }
 })

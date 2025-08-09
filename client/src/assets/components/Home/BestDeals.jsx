@@ -50,7 +50,7 @@ export default function BestDeals() {
                 <p className=" raleway text-sm text-gray-600 flex-grow">
                   {deal.description}
                 </p>
-                <p className="text-xl text-green-600 font-semibold pt-2">₹{deal.price}</p>
+                <p className="text-xl text-green-600 font-semibold pt-2">₹ {deal.price}.00</p>
               </div>
             </Link>
           ))}
@@ -66,7 +66,7 @@ export default function BestDeals() {
                 alt={deal.title}
                 className="w-full h-40 object-cover"
               />
-              <p className="text-green-600 font-semibold text-center py-2">₹{deal.price}</p>
+              <p className="text-green-600 font-semibold text-center py-2">₹ {deal.price}.00</p>
             </div>
           ))}
         </div>

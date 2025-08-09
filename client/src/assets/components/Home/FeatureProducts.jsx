@@ -69,7 +69,7 @@ export default function FeatureProducts() {
                                 className="w-full h-30 md:h-40 object-contain mb-2"
                             />
                             <p className=" raleway line-clamp-5  text-md text-gray-700 ">{product.description}</p>
-                            <p className="text-xl text-green-600 font-semibold mt-5 md:mt-2">₹{product.price}</p>
+                            <p className="text-xl text-green-600 font-semibold mt-5 md:mt-2">₹ {product.price}.00</p>
                         </div>
                         </Link>
                     ))}

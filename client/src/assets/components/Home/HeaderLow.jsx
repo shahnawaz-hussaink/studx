@@ -4,9 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import {Link} from 'react-router-dom'
 
 export default function HeaderLow({showSearchBar=true}) {
-
-  const [categories, setCategories] = useState([]);
   
+  const [categories, setCategories] = useState([]);
     useEffect(() => {
       fetch("http://localhost:3000/api/category")
         .then((res) => res.json())
@@ -18,7 +17,6 @@ export default function HeaderLow({showSearchBar=true}) {
           setCategories([]);
         });
     }, []);
-
   return (
     <>
       <div className="raleway w-full bg-white border-b border-gray-200 text-sm lg:text-md">
@@ -34,11 +32,11 @@ export default function HeaderLow({showSearchBar=true}) {
                 </option>
             ))}
           </select>
-          <a href="/track" className="flex items-center gap-1">
+          <a href="/upcoming" className="flex items-center gap-1">
             <MapPin size={18} /> Track Order
           </a>
-          <a href="/sell">Sell</a>
-          <a href="/buy">Buy</a>
+          <a href="/upcoming">Sell</a>
+          <a href="/upcoming">Buy</a>
           <a href="mailto:shahnawaz.hussain96508@gmail.com" className="flex items-center gap-1">
             <Info size={18} /> Need Help
           </a>
@@ -55,7 +53,6 @@ export default function HeaderLow({showSearchBar=true}) {
           </span>
         </div>
       </div>
-      
     </div>
     <div className="flex md:hidden w-full px-5">
       {showSearchBar && (<SearchBar showSearchBar={true}/>)}

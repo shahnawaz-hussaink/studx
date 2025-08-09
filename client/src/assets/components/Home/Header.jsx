@@ -5,7 +5,7 @@ import HeaderLow from "../Home/HeaderLow";
 export default function Header({ showSearchBar = true}) {
   return (
     <>
-      <HeaderMain />
+      <HeaderMain showSearchBar={showSearchBar}/>
       <HeaderLow showSearchBar={showSearchBar}/>
     </>
   );

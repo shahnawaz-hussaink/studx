@@ -5,6 +5,9 @@ import AuthPage from './Pages/AuthPage';
 import SignupForm from './assets/components/Auth/SignupForm';
 import ProductDetails from './assets/components/Product/ProductDetails';
 import AllProducts from './assets/components/Product/AllProducts';
+import Upcoming from './assets/components/UPCOMING/Upcoming';
+import LoginForm from './assets/components/Auth/LoginForm';
+
 
 function App() {
 
@@ -14,12 +17,14 @@ function App() {
         {/* <Home/> */}
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<AuthPage />} />
+            <Route path="/login" element={<LoginForm />} />
             <Route path='/signup' element={<SignupForm/>} />
             <Route path='/api/product/:id' element={<ProductDetails/>} />
             <Route path='/all-products' element={<AllProducts/>} />
+            <Route path='/upcoming' element={<Upcoming/>} />
          </Routes>
-      </div>
+
+    </div>
     </>
   )
 }

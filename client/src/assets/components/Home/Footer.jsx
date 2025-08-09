@@ -42,13 +42,13 @@ export default function Footer() {
         <div className="w-full md:w-auto md:text-center md:text-left">
           <h2 className="text-xl">QUICK LINKS</h2>
           <ul className="text-gray-400 my-5 space-y-2">
-            <li><Link to="/coming-soon">Shop Product</Link></li>
-            <li><Link to="/coming-soon">Sell Product</Link></li>
-            <li><Link to="/coming-soon">Shopping cart</Link></li>
-            <li><Link to="/coming-soon">Wishlist</Link></li>
-            <li><Link to="/coming-soon">Compare</Link></li>
-            <li><Link to="/coming-soon">Customer Help</Link></li>
-            <li><Link to="/coming-soon">About Us</Link></li>
+            <li><Link to="/upcoming">Shop Product</Link></li>
+            <li><Link to="/upcoming">Sell Product</Link></li>
+            <li><Link to="/upcoming">Shopping cart</Link></li>
+            <li><Link to="/upcoming">Wishlist</Link></li>
+            <li><Link to="/upcoming">Compare</Link></li>
+            <li><Link to="/upcoming">Customer Help</Link></li>
+            <li><Link to="/upcoming">About Us</Link></li>
           </ul>
         </div>
 

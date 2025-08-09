@@ -11,7 +11,7 @@ import productRoute from './routes/productDetails.js'
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.port || 3000;
 
 // Middleware
 app.use(cors());
@@ -27,7 +27,6 @@ app.use('/api/category', categoryRoute);
 app.use('/api/featured-products', featuredProductsRoute);
 app.use("/api/auth", authRoutes);
 app.use("/", productRoute);
-
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, )
 .then(() => console.log(" MongoDB connected"))
