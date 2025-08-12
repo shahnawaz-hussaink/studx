@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 
 import dealsRoute from './routes/deals.js';
 import categoryRoute from './routes/categories.js';
@@ -10,10 +10,13 @@ import authRoutes from './routes/auth.js';
 import productRoute from './routes/productDetails.js'
 dotenv.config();
 
+import './models/db.js'
+
 const app = express();
 const PORT = process.env.port || 3000;
 
 // Middleware
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 
@@ -28,9 +31,6 @@ app.use('/api/featured-products', featuredProductsRoute);
 app.use("/api/auth", authRoutes);
 app.use("/", productRoute);
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, )
-.then(() => console.log(" MongoDB connected"))
-.catch(err => console.error("MongoDB connection failed:", err));
 
 // Start server
 app.listen(PORT, () => {

@@ -4,11 +4,11 @@ const mongo_Category = require("../models/category");
 const stored_category = require("../data/category");
 
 mongoose
-    .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(process.env.MONGO_CONN)
     .then(async ()=>{
-        await mongo_Category.deleteMany(); // delter previous data if there is
+        await mongo_Category.deleteMany(); // deleter previous data if there is
         await mongo_Category.insertMany(stored_category);
-        console.log("Category added to MongoDb");
+        console.log("Category added to MongoDb 🔓");
         mongoose.connection.close();
 
     })

@@ -5,7 +5,7 @@ const mongo_Deal = require("../models/deals");
 const stored_deals = require("../data/deals")
 
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_CONN)
   .then(async () => {
     await mongo_Deal.deleteMany(); 
     await mongo_Deal.insertMany(stored_deals);

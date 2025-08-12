@@ -1,49 +1,69 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+// import { useState } from "react";
+// import { useNavigate, Link } from "react-router-dom";
+
+import React, { useState } from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import {ToastContainer} from 'react-toastify'
+import { handleError, handleSuccess } from '../../../utils'
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [loginInfo,setLoginInfo] = useState({
+            email:'',
+            password:''
+        })
+    const navigate = useNavigate();
 
-  const handleOnClick = async () => {
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!isValidEmail) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  if (!password) {
-    alert("Please enter a password.");
-    return;
-  }
-
-  try {
-    const response = await fetch("http://localhost:3000/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ email, password })
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      alert(data.error || "Invalid credentials");
-      return;
+    const handleChange = (e)=>{
+        const {name,value} = e.target;
+        console.log(name,value);
+        const copyloginInfo = { ...loginInfo};
+        copyloginInfo[name] = value;
+        setLoginInfo(copyloginInfo);
     }
 
-    alert(`${data.message} ${data.user.name} ❤️`);
-    setEmail("");
-    setPassword("");
-    navigate("/");
+    const handleLogin = async (e)=>{
+        e.preventDefault();
+        const {email,password} = loginInfo;
 
-  } catch (err) {
-    console.error("Login Error:", err);
-    alert("Something went wrong. Please try again later.");
-  }
-};
+        // Client side
+        if(!email || !password){
+            return handleError("All fields are required")
+        }
+
+        // server side 
+        try{
+            const url = 'http://localhost:3000/api/auth/login';
+            const response = await fetch(url,{
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify(loginInfo)
+            });
+            const result = await response.json();
+            const {success,message,error,jwtToken,name} = result;
+            if(success){
+                handleSuccess(message);
+                localStorage.setItem('token',jwtToken);
+                localStorage.setItem('loggedInUser',name)
+                setTimeout(() => {
+                    navigate('/');
+                }, 1000);
+            } else if(error){
+                const details = error?.details[0].message;
+                handleError(details) 
+            } else if(!success){
+                handleError(message)
+            }
+            
+            console.log(result)
+        }
+
+        catch(error){
+            handleError(error)
+        }
+         
+    };
 
   return (
     <div className="flex flex-col md:flex-row w-full min-h-screen">
@@ -59,16 +79,17 @@ export default function LoginForm() {
             </p>
           </div>
 
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleLogin}>
             <div className="w-full my-1 md:my-2">
               <label htmlFor="email" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                 E-mail
               </label>
               <input
                 id="email"
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                name="email"
+                value={loginInfo.email}
+                onChange={handleChange}
                 placeholder="abc@gmail.com"
                 className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
               />
@@ -78,9 +99,10 @@ export default function LoginForm() {
                 Password
               </label>
               <input
+              name="password"
                 id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={loginInfo.password}
+                onChange={handleChange}
                 type="password"
                 placeholder="abc#123"
                 className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-1 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
@@ -90,8 +112,9 @@ export default function LoginForm() {
 
           <div className="mt-6">
             <button
+              type="submit"
               className="w-full bg-[#1B6392] py-1 md:py-2 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl"
-              onClick={handleOnClick}
+              onClick={handleLogin}
             >
               Login
             </button>
@@ -106,6 +129,7 @@ export default function LoginForm() {
           className="h-screen w-full object-cover"
         />
       </div>
+      <ToastContainer/>
     </div>
   );
 }

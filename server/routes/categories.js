@@ -16,10 +16,11 @@ const Category = require("../models/category");
 router.get("/", async(req,res)=>{
   try{
     const category = await Category.find();
-    res.json(category);
+    res.status(200).json(category);
   }
   catch(error){
-    res.status(500).json({ message: "Error fetching deals", error });
+    console.log(error.message);
+    res.status(500).json({ message: "Error fetching category", error });
   }
 })
 

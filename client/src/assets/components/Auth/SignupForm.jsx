@@ -1,75 +1,70 @@
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
-import HeaderMain from "../Home/HeaderMain";
+// import { useState } from "react";
+// import { useNavigate } from 'react-router-dom';
+// import HeaderMain from "../Home/HeaderMain";
+
+import React, { useState } from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import {ToastContainer} from 'react-toastify'
+import { handleError, handleSuccess } from '../../../utils'
 
 export default function SignupForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [agreed, setAgreed] = useState(false);
+  const [signupInfo,setSignupInfo] = useState({
+            name:'',
+            email:'',
+            password:''
+        })
+    const [agreed,setAgreed] = useState(false) ;
 
-  const navigate = useNavigate();
-
-  const handleOnClick = async () => {
-  if (!name || !email || !password || !confirmPassword) {
-    alert("Please fill in all fields.");
-    return;
-  }
-
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!isValidEmail) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  if (password.length < 6) {
-    alert("Password should be at least 6 characters.");
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  if (!agreed) {
-    alert("You must agree to the Terms & Conditions.");
-    return;
-  }
-
-  // Sending data to backend
-  try {
-    const response = await fetch("http://localhost:3000/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, email, password })
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      alert(data.error || "Something went wrong.");
-      return;
+    const navigate = useNavigate();
+    const handleChange = (e)=>{
+        const {name,value} = e.target;
+        console.log(name,value);
+        const copysignupInfo = { ...signupInfo};
+        copysignupInfo[name] = value;
+        setSignupInfo(copysignupInfo);
     }
 
-    alert("Welcome aboard! Your STUDx account has been created successfully. ❤️");
+    const handleSignin = async (e)=>{
+        e.preventDefault();
+        const {name,email,password} = signupInfo;
 
-    setName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setAgreed(false);
+        // Client side
+        if(!name || !email || !password){
+            return handleError("All fields are required")
+        }
 
-    navigate("/"); // go to home page
+        // server side 
+        try{
+            const url = 'http://localhost:3000/api/auth/signup';
+            const response = await fetch(url,{
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify(signupInfo)
+            });
+            const result = await response.json();
+            const {success,message,error} = result;
+            if(success){
+                handleSuccess(message);
+                setTimeout(() => {
+                    navigate('/login');
+                }, 1000);
+            } else if(error){
+                const details = error?.details[0].message;
+                handleError(details) 
+            } else if(!success){
+                handleError(message)
+            }
+            
+            console.log(result)
+        }
 
-  } catch (error) {
-    console.error("Signup Error:", error);
-    alert("Server error, please try again later.");
-  }
-};
+        catch(error){
+            handleError(error)
+        }
+         
+    };
 
 
   return (
@@ -94,9 +89,10 @@ export default function SignupForm() {
                 <input
                   id="name"
                   type="text"
+                  name='name'
                   placeholder="Shaz Hussain"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={signupInfo.name}
+                  onChange={handleChange}
                   className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
               </div>
@@ -107,9 +103,10 @@ export default function SignupForm() {
                 <input
                   id="email"
                   type="email"
+                  name='email'
                   placeholder="abc@gmail.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={signupInfo.email}
+                onChange={handleChange}
                   className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
               </div>
@@ -121,14 +118,15 @@ export default function SignupForm() {
                 <input
                   id="password"
                   type="password"
+                  name='password'
                   placeholder="abc#123"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={signupInfo.password}
+                onChange={handleChange}
                   className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-2 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
               </div>
 
-              <div className="my-1 md:my-2">
+              {/* <div className="my-1 md:my-2">
                 <label htmlFor="confirm-password" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
                   Confirm Password
                 </label>
@@ -140,7 +138,7 @@ export default function SignupForm() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-1 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
                 />
-              </div>
+              </div> */}
 
               <div className="flex items-center space-x-3 my-1">
                 <input
@@ -159,7 +157,7 @@ export default function SignupForm() {
             <div className="mt-6">
               <button
                 className="w-full bg-[#1B6392] py-1 md:py-2 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl"
-                onClick={handleOnClick}
+                onClick={handleSignin}
               >
                 Sign up
               </button>
