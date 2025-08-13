@@ -8,6 +8,7 @@ import categoryRoute from './routes/categories.js';
 import featuredProductsRoute from './routes/featuredProduct.js';
 import authRoutes from './routes/auth.js'; 
 import productRoute from './routes/productDetails.js'
+import userProfile from './routes/profile.js'
 dotenv.config();
 
 import './models/db.js'
@@ -30,6 +31,7 @@ app.use('/api/category', categoryRoute);
 app.use('/api/featured-products', featuredProductsRoute);
 app.use("/api/auth", authRoutes);
 app.use("/", productRoute);
+app.use('/api/',userProfile)
 // MongoDB connection
 
 // Start server

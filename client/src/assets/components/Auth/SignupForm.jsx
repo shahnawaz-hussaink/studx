@@ -173,6 +173,7 @@ export default function SignupForm() {
           />
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }

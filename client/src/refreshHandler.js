@@ -9,11 +9,10 @@ function RefreshHandler({setIsAuthenticated}) {
     if (localStorage.getItem('token')) {
         setIsAuthenticated(true);
         if (
-            location.pathname === "/" ||
             location.pathname === "/login" ||
             location.pathname === "/signup"
         ) {
-            navigate('/home', { replace: true }); // ✅ avoid loop
+            navigate('/', { replace: true }); 
         }
     }
 }, [location, navigate, setIsAuthenticated]);
