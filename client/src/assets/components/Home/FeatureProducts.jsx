@@ -43,14 +43,14 @@ export default function FeatureProducts() {
                             Feature Products
                         </h2>
                         <nav className="raleway flex flex-wrap gap-2 md:gap-5  text-sm md:text-base items-center px-2">
-                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>All Products</a>
-                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Laptop</a>
-                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Books</a>
-                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Furniture</a>
-                            <a href="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Utensils</a>
-                            <a href="/all-products" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
+                            <Link to="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>All Products</Link>
+                            <Link to="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Laptop</Link>
+                            <Link to="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Books</Link>
+                            <Link to="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Furniture</Link>
+                            <Link to="" className='hidden md:flex hover:text-orange-400 hover:underline underline-offset-8'>Utensils</Link>
+                            <Link to="/all-products" className="flex items-center text-center gap-1 text-orange-400 hover:underline underline-offset-8 hover:text-orange-500">
                                 Browse all products <ArrowRight size={16} />
-                            </a>
+                            </Link>
                         </nav>
                     </div>
                 </div>

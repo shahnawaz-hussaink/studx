@@ -4,7 +4,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import SignupForm from './assets/components/Auth/SignupForm';
 import ProductDetails from './assets/components/Product/ProductDetails';
 import AllProducts from './assets/components/Product/AllProducts';
-import Upcoming from './assets/components/upcoming/Upcoming';
+import Upcoming from './Pages/Upcoming'
 import LoginForm from './assets/components/Auth/LoginForm';
 import RefreshHandler from './refreshHandler';
 import { useState } from 'react';
@@ -29,7 +29,7 @@ function App() {
         <Route path="/api/product/:id" element={<ProductDetails />} />
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/upcoming" element={<Upcoming />} />
-        <Route path='/profile' element={<PrivateRoute element={<Profile/>}/>}/>
+        <Route path='/profile' element={<Profile setIsAuthenticated={setIsAuthenticated}/>}/>
       </Routes>
     </>
   );

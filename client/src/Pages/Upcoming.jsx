@@ -1,7 +1,8 @@
 import {useState } from "react";
-import Header from "../Home/Header";
-import Footer from "../Home/Footer";
+import Header from "../assets/components/Home/Header";
+import Footer from "../assets/components/Home/Footer";
 import { ArrowLeft } from "lucide-react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export default function Upcoming(){
      const [progress, setProgress] = useState(55);
@@ -28,8 +29,8 @@ export default function Upcoming(){
                     </div>
                     <p className="text-sm text-gray-500 mt-2">Expected launch date: Sept 2025</p>
                     </div>
-                    <a href="/" className="inline-block bg-gray-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-950 transition-all duration-200 transform hover:-translate-y-1">Back to Homepage
-                    </a>
+                    <Link to="/" className="inline-block bg-gray-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-950 transition-all duration-200 transform hover:-translate-y-1">Back to Homepage
+                    </Link>
                     <div className="mt-10 pt-6 border-t border-gray-200">
                     <h2 className="text-xl font-bold text-gray-800 mb-4">Stay Up-to-Date</h2>
                     <form className="flex flex-col sm:flex-row justify-center gap-4" onSubmit={(e) => e.preventDefault()}>

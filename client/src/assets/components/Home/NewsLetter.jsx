@@ -11,6 +11,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import {  useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function NewsLetter(){
 
@@ -58,21 +59,21 @@ export default function NewsLetter(){
                     </div>
 
                     <div className="flex justify-center gap-6 text-white mt-4">
-                        <a href="https://instagram.com/shahnawaz.hussaink" target="_blank" rel="noopener noreferrer">
+                        <Link to="https://instagram.com/shahnawaz.hussaink" target="_blank" rel="noopener noreferrer">
                             <Instagram className="hover:text-gray-300 cursor-pointer" />
-                        </a>
-                        <a href="https://github.com/shahnawaz-hussaink" target="_blank" rel="noopener noreferrer">
+                        </Link>
+                        <Link to="https://github.com/shahnawaz-hussaink" target="_blank" rel="noopener noreferrer">
                             <Github className="hover:text-gray-300 cursor-pointer" />
-                        </a>
-                        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                        </Link>
+                        <Link to="https://youtube.com/" target="_blank" rel="noopener noreferrer">
                             <Youtube className="hover:text-gray-300 cursor-pointer" />
-                        </a>
-                        <a href="https://portfolio2-0-pi-nine.vercel.app" target="_blank" rel="noopener noreferrer">
+                        </Link>
+                        <Link to="https://portfolio2-0-pi-nine.vercel.app" target="_blank" rel="noopener noreferrer">
                             <Globe className="hover:text-gray-300 cursor-pointer" />
-                        </a>
-                        <a href="mailto:shahnawaz.hussain96508@gmail.com" target="_blank" rel="noopener noreferrer">
+                        </Link>
+                        <Link to="mailto:shahnawaz.hussain96508@gmail.com" target="_blank" rel="noopener noreferrer">
                             <Mail className="hover:text-gray-300 cursor-pointer" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

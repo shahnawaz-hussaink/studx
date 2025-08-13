@@ -16,7 +16,7 @@ import './models/db.js'
 const app = express();
 const PORT = process.env.port || 3000;
 
-// Middleware
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
   res.send(`Studx backend is running on port ${PORT}`);
 });
 
+// Middleware
 app.use('/api/deals', dealsRoute);
 app.use('/api/category', categoryRoute);
 app.use('/api/featured-products', featuredProductsRoute);

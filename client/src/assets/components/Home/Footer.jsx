@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="bg-gray-900 raleway text-white">
       <div className="flex flex-col md:flex-row md:justify-center md:gap-25 px-6 py-10 gap-10">
         <div className="w-full md:w-auto md:text-center md:text-left">
-          <a href="/">
+          <Link to="/">
             <h3 className="text-4xl font-bold">STUDx</h3>
-          </a>
+          </Link>
           <div className="my-5">
             <p className="text-gray-400">Customer support</p>
             <h2 className="text-white">+91 965080XXXX</h2>
@@ -22,19 +22,19 @@ export default function Footer() {
         <div className="w-full md:w-auto md:text-center md:text-left">
           <h2 className="text-xl">TOP CATEGORY</h2>
           <ul className="text-gray-400 my-5 space-y-2">
-            <li><a href="">Computer & Laptop</a></li>
-            <li><a href="">SmartPhone</a></li>
-            <li><a href="">Headphone</a></li>
-            <li><a href="" className="text-yellow-400">Home</a></li>
-            <li><a href="">Kettle</a></li>
-            <li><a href="">Mini Fridges</a></li>
+            <li><Link to="">Computer & Laptop</Link></li>
+            <li><Link to="">SmartPhone</Link></li>
+            <li><Link to="">Headphone</Link></li>
+            <li><Link to="" className="text-yellow-400">Home</Link></li>
+            <li><Link to="">Kettle</Link></li>
+            <li><Link to="">Mini Fridges</Link></li>
             <li>
-              <a
-                href="/all-products"
+              <Link
+                to="/all-products"
                 className="flex items-center justify-center justify-start gap-1 text-yellow-400 hover:underline underline-offset-8 hover:text-yellow-500"
               >
                 Browse all products <ArrowRight size={16} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -84,14 +84,14 @@ export default function Footer() {
           <p className="text-gray-400">
             © 2025&nbsp;|&nbsp;
             Developed by&nbsp;
-            <a
-              href="https://portfolio2-0-pi-nine.vercel.app/"
+            <Link
+              to="https://portfolio2-0-pi-nine.vercel.app/"
               className="text-yellow-400 hover:underline underline-offset-3"
               target="_blank"
               rel="noopener noreferrer"
             >
               Shahnawaz Hussain
-            </a>
+            </Link>
           </p>
         </div>
 

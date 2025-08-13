@@ -32,17 +32,17 @@ export default function HeaderLow({showSearchBar=true}) {
                 </option>
             ))}
           </select>
-          <a href="/upcoming" className="flex items-center gap-1">
+          <Link to="/upcoming" className="flex items-center gap-1">
             <MapPin size={18} /> Track Order
-          </a>
-          <a href="/upcoming">Sell</a>
-          <a href="/upcoming">Buy</a>
-          <a href="mailto:shahnawaz.hussain96508@gmail.com" className="flex items-center gap-1">
+          </Link>
+          <Link to="/upcoming">Sell</Link>
+          <Link to="/upcoming">Buy</Link>
+          <Link to="mailto:shahnawaz.hussain96508@gmail.com" className="flex items-center gap-1">
             <Info size={18} /> Need Help
-          </a>
-          <a href="/contact" className="flex items-center gap-1">
+          </Link>
+          <Link to="/contact" className="flex items-center gap-1">
             <Headphones size={18} /> Support
-          </a>
+          </Link>
         </div>
         <div className="flex gap-2 items-center">
           <Mail size={18} />

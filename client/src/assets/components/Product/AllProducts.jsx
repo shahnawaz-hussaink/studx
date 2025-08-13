@@ -1,12 +1,13 @@
 import { ArrowLeft } from 'lucide-react';
 import React, { useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import Header from '../Home/Header';
 import Footer from '../Home/Footer';
 
 export default function AllProducts(){
     const [FeatureProduct, setFeatureProduct] = useState([]);
     const [deals, setDeals] = useState([]);
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch("http://localhost:3000/api/featured-products")

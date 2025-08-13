@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroSlider() {
   const prevRef = useRef(null);
@@ -31,40 +32,40 @@ export default function HeroSlider() {
         className="overflow-hidden"
       >
         <SwiperSlide>
-          <a href="/product/laptop">
+          <Link to="/product/laptop">
             <img
               src="/SwiperImages/Laptop.png"
               alt="Promo 1"
               className="w-full max-h-[200px] lg:max-h-[450px] object-cover cursor-pointer transition hover:scale-[1.01] duration-200"
             />
-          </a>
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/product/furniture">
+          <Link to="/product/furniture">
             <img
               src="/SwiperImages/Furniture.png"
               alt="Promo 2"
               className="w-full max-h-[200px] lg:max-h-[450px] object-cover cursor-pointer transition hover:scale-[1.01] duration-200"
             />
-          </a>
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/product/laptop-sale">
+          <Link to="/product/laptop-sale">
             <img
               src="/SwiperImages/Book.png"
               alt="Promo 3"
               className="w-full max-h-[200px] lg:max-h-[450px] object-cover cursor-pointer transition hover:scale-[1.01] duration-200"
             />
-          </a>
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/product/kitchen">
+          <Link to="/product/kitchen">
             <img
               src="/SwiperImages/Kitchen.png"
               alt="Promo 4"
               className="w-full max-h-[200px] lg:max-h-[450px] object-cover cursor-pointer transition hover:scale-[1.01] duration-200"
             />
-          </a>
+          </Link>
         </SwiperSlide>
       </Swiper>
       <button

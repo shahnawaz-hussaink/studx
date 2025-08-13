@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams , useNavigate } from "react-router-dom";
+import { useParams , useNavigate, Link } from "react-router-dom";
 import Header from "../Home/Header";
 import { Loader,ArrowLeft } from "lucide-react";
 import Footer from "../Home/Footer";
@@ -14,7 +14,6 @@ export default function ProductDetails() {
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
-        console.log(product.title);
       })
       .catch((err) => {
         console.error("Error fetching product:", err);
@@ -60,9 +59,9 @@ export default function ProductDetails() {
               </p>
               <p className="raleway text-sm font-black text-gray-500 pb-5">
                 Sell by{" "}
-                <a className="text-black cursor-pointer">
+                <Link className="text-black cursor-pointer">
                   {product.seller?.name}
-                </a>
+                </Link>
               </p>
               <p className="text-xl md:text-2xl pb-5">₹ {product.price}.00</p>
             </div>
@@ -71,12 +70,12 @@ export default function ProductDetails() {
               <button className="px-6 py-2 bg-orange-500 text-white rounded-xl shadow hover:bg-orange-600 transition ">
                 Buy Now
               </button>
-              <a
-                href={`mailto:${product.seller.email}`}
+              <Link
+                to={`mailto:${product.seller.email}`}
                 className="px-6 py-2 border-2 border-orange-500 text-orange-500 rounded-xl hover:bg-orange-50 transition text-center"
               >
                 Contact Seller
-              </a>
+              </Link>
             </div>
             <div className="w-full md:w-3/4 py-10">
               <div className="bg-gray-300 w-full h-[1px]" />
@@ -115,12 +114,12 @@ export default function ProductDetails() {
                 </li>
                 <li>
                   <span className="font-medium">Email:</span>{" "}
-                  <a
-                    href={`mailto:${product.seller.email}`}
+                  <Link
+                    to={`mailto:${product.seller.email}`}
                     className="text-blue-600 hover:underline underline-offset-4 hover:text-orange-500"
                   >
                     {product.seller.email}
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <span className="font-medium">Joined in:</span>{" "}

@@ -26,9 +26,9 @@ export default function BestDeals() {
         </div>
         <div className="raleway flex justify-content md:pt-10 text-blue-500 hover:text-blue-600">
           <div>
-            <a href="/all-products" className="flex items-center text-center gap-1 md:text-xl text-blue-600 hover:underline underline-offset-8">
+            <Link to="/all-products" className="flex items-center text-center gap-1 md:text-xl text-blue-600 hover:underline underline-offset-8">
                                             Browse all products <ArrowRight size={16} />
-             </a> 
+             </Link> 
           </div>
         </div>
       </div>

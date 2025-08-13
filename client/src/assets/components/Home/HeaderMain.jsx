@@ -17,9 +17,9 @@ export default function HeaderMain({showSearchBar=true}) {
   return (
     <div className="raleway bg-[#1B6392] px-6 py-4 sticky top-0 z-50">
       <div className="flex items-center justify-between">
-        <a href="/">
+        <Link to="/">
           <h3 className="raleway Header-logo text-4xl text-white">STUDx</h3>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center w-1/2 px-5">
           {showSearchBar && (
@@ -32,9 +32,9 @@ export default function HeaderMain({showSearchBar=true}) {
         </div>
 
         <div className="hidden md:flex items-center gap-5 ">
-          <a href="/upcoming" className="text-white hover:text-gray-300"><ShoppingCart size={28} /></a>
-          <a href="/upcoming" className="text-white hover:text-gray-300"><Heart size={28} /></a>
-          <Link to="/login" className="text-white hover:text-gray-300"><User size={28} /></Link>
+          <Link to="/upcoming" className="text-white hover:text-gray-300"><ShoppingCart size={28} /></Link>
+          <Link to="/upcoming" className="text-white hover:text-gray-300"><Heart size={28} /></Link>
+          <Link to="/profile" className="text-white hover:text-gray-300"><User size={28} /></Link>
         </div>
 
         <div className="md:hidden">

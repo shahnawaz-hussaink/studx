@@ -1,5 +1,5 @@
 const userValidator = (req, res) => {
-    res.json(req.user); // req.user is already set by middleware
+    res.json(req.user); 
 };
 
 module.exports = userValidator ;

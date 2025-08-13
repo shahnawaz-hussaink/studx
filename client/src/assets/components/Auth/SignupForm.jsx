@@ -126,21 +126,6 @@ export default function SignupForm() {
                 />
               </div>
 
-              {/* <div className="my-1 md:my-2">
-                <label htmlFor="confirm-password" className="block text-base md:text-xl font-bold text-[#1E1E1E]">
-                  Confirm Password
-                </label>
-                <input
-                  id="confirm-password"
-                  type="password"
-                  placeholder="abc#123"
-                  name='confirm-password'
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="text-base md:text-lg border-2 border-gray-500 w-full h-10 md:h-12 my-1 px-4 rounded-md focus:outline-none focus:border-[#1B6392]"
-                />
-              </div> */}
-
               <div className="flex items-center space-x-3 my-1">
                 <input
                   id="terms"
