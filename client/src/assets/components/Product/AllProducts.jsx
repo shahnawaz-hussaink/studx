@@ -35,7 +35,7 @@ export default function AllProducts(){
 
     return (
             <>
-                <Header showSearchBar={false}/>
+                <Header />
                 <div className="px-4 py-1 md:hidden">
                     <button
                     onClick={() => navigate(-1)}

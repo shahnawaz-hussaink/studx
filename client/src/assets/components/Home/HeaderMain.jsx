@@ -86,7 +86,7 @@ export default function HeaderMain({ showSearchBar = true }) {
         </div>
       </div>
 
-      {menuOpen && <MobileMenu />}
+      {menuOpen && <MobileMenu /> }
     </div>
   );
 }

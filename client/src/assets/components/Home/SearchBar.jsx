@@ -31,7 +31,7 @@ export default function SearchBar({ searchText, onChange,}) {
   };
 
   return (
-    <div className="flex items-center h-12 w-full bg-white border border-gray-300 px-3 py-2 rounded-full shadow-sm overflow-hidden my-2">
+    <div className="flex items-center h-12 w-full bg-white border border-gray-300 px-3 py-2 rounded-full shadow-sm overflow-hidden my-2 md:ml-20">
   <>
     <select
       className="text-sm bg-transparent pr-2 focus:outline-none whitespace-nowrap"

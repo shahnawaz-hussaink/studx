@@ -55,7 +55,7 @@ export default function CategorySection() {
           {categories.map((item, index) => (
             <Link
               key={index}
-              to={`/category/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+              to={`upcoming`}
               className=" w-30 h-40 md:w-56 md:h-52 border border-gray-300 rounded-md snap-center raleway text-lg font-medium shrink-0 text-center flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
             >
               <img

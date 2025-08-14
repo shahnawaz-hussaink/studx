@@ -60,6 +60,10 @@ export default function BestDeals() {
       <div className="block sm:hidden p-2">
         <div className="grid grid-cols-2 gap-4 ">
           {deals.slice(0,6).map((deal, index) => (
+            <Link
+              to={`/api/product/${deal._id}`}
+              key={deal._id}
+            >
             <div key={index} className="shadow-lg rounded-md">
               <img
                 src={deal.image}
@@ -68,6 +72,7 @@ export default function BestDeals() {
               />
               <p className="text-green-600 font-semibold text-center py-2">₹ {deal.price}.00</p>
             </div>
+            </Link> 
           ))}
         </div>
       </div>
