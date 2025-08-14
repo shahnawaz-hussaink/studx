@@ -68,7 +68,7 @@ export default function ProductDetails() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4 w-18/20 m-auto">
               <button className="px-6 py-2 bg-orange-500 text-white rounded-xl shadow hover:bg-orange-600 transition ">
-                Buy Now
+                <Link to="/upcoming">Buy now</Link>
               </button>
               <Link
                 to={`mailto:${product.seller.email}`}
@@ -135,10 +135,10 @@ export default function ProductDetails() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 p-5 md:w-3/4 justify-items-start">
               <button className="cursor-pointer w-full px-4 py-2 font-black text-black bg-yellow-400 rounded-md opacity-80 hover:opacity-100">
-                Buy Now
+                <Link to="/upcoming">Buy Now</Link>
               </button>
               <button className="cursor-pointer w-full px-4 py-2 font-black text-black bg-orange-400 rounded-md opacity-90 hover:opacity-100">
-                Add to Cart
+                <Link to="/upcoming">Add to Cart</Link>
               </button>
             </div>
           </div>

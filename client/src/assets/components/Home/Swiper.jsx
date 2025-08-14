@@ -32,7 +32,7 @@ export default function HeroSlider() {
         className="overflow-hidden"
       >
         <SwiperSlide>
-          <Link to="/product/laptop">
+          <Link to="/upcoming">
             <img
               src="/SwiperImages/Laptop.png"
               alt="Promo 1"
@@ -41,7 +41,7 @@ export default function HeroSlider() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/product/furniture">
+          <Link to="/upcoming">
             <img
               src="/SwiperImages/Furniture.png"
               alt="Promo 2"
@@ -50,7 +50,7 @@ export default function HeroSlider() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/product/laptop-sale">
+          <Link to="/upcoming">
             <img
               src="/SwiperImages/Book.png"
               alt="Promo 3"
@@ -59,7 +59,7 @@ export default function HeroSlider() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/product/kitchen">
+          <Link to="/upcoming">
             <img
               src="/SwiperImages/Kitchen.png"
               alt="Promo 4"

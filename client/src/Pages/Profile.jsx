@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
-import { handleError } from "../utils";
+import { handleError, handleSuccess } from "../utils";
 import Header from "../assets/components/Home/Header";
 import Footer from "../assets/components/Home/Footer";
 import { UserRound, AlertCircle } from "lucide-react";
 import HeaderMain from "../assets/components/Home/HeaderMain";
 import HeaderLow from "../assets/components/Home/HeaderLow";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Profile({setIsAuthenticated}) {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let delayTimer;
@@ -19,7 +20,7 @@ export default function Profile({setIsAuthenticated}) {
       try {
         const token = localStorage.getItem("token");
         if (!token) {
-          handleError("You are not logged in.");
+          handleError("You are not logged in");
           setLoading(false);
           return;
         }
@@ -50,7 +51,7 @@ export default function Profile({setIsAuthenticated}) {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/login";
+    navigate('/');
   };
 
   // if (loading) {

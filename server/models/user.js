@@ -1,3 +1,4 @@
+const { string } = require('joi');
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
@@ -19,6 +20,10 @@ const UserSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    isVerified:{
+        type:String,
+        default:"Verified"
     }
 });
 

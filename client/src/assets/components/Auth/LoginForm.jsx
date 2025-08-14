@@ -5,6 +5,8 @@ import React, { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import {ToastContainer} from 'react-toastify'
 import { handleError, handleSuccess } from '../../../utils'
+import Footer from '../Home/Footer'
+import HeaderMain from '../Home/HeaderMain'
 
 export default function LoginForm() {
   const [loginInfo,setLoginInfo] = useState({
@@ -66,7 +68,9 @@ export default function LoginForm() {
     };
 
   return (
-    <div className="flex flex-col md:flex-row w-full min-h-screen">
+    <>
+    <HeaderMain/>
+      <div className="flex flex-col md:flex-row w-full ">
       <div className="raleway w-full md:w-2/4 flex justify-center py-10 px-10 md:py-20">
         <div className="w-full rounded-xl shadow-2xl p-5 md:p-15 py-10">
           <div className="pb-6 md:pb-10">
@@ -112,9 +116,9 @@ export default function LoginForm() {
 
           <div className="mt-6">
             <button
-              type="submit"
-              className="w-full bg-[#1B6392] py-1 md:py-2 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl"
+              type="button"
               onClick={handleLogin}
+              className="w-full bg-[#1B6392] py-1 md:py-2 border-2 border-[#1B6392] rounded-2xl font-bold md:font-black text-white text-xl md:text-3xl cursor-pointer"
             >
               Login
             </button>
@@ -129,7 +133,9 @@ export default function LoginForm() {
           className="h-screen w-full object-cover"
         />
       </div>
-      <ToastContainer/>
     </div>
+    <Footer/>
+    <ToastContainer/>
+    </>
   );
 }
