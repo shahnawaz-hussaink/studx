@@ -12,7 +12,7 @@ export default function MobileMenu({ children }) {
     <>
       {isAuthenticated && (<div className="flex justify-end mt-4">
         <div className="flex justify-end gap-3 bg-white/10 px-4 py-2 rounded-full shadow-md hover:bg-white/20 transition-all duration-300">
-          <Link to="/profile" className="flex items-center gap-2">
+          <Link to="/profile" className="flex items-center gap-2"> 
             <img
               src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
                 userName
