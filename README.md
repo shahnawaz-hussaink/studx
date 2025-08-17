@@ -7,7 +7,7 @@ STUDx is a full-stack marketplace platform built with the MERN stack, designed s
 
 
 ### 🌐 STUDx - Campus Exchange Hub
-[![Screenshot](STUDX.png)](https://github.com/shahnawaz-hussaink/studx)
+[![Screenshot](STUDx.png)](https://github.com/shahnawaz-hussaink/studx)
 
 
 ---
