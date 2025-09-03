@@ -20,5 +20,13 @@ router.get("/api/product/:id", async (req, res) => {
     res.status(500).json({ error: "Server error." });
   }
 });
-
+router.post("/api/products", async (req, res) => {
+  try {
+    const newProduct = new Featured_Product(req.body);  
+    await newProduct.save();
+    res.status(201).json(newProduct);
+  } catch (err) {
+    res.status(500).json({ message: "Error saving product", error: err.message });
+  }
+});
 module.exports = router;

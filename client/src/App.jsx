@@ -9,6 +9,7 @@ import LoginForm from './assets/components/Auth/LoginForm';
 import RefreshHandler from './refreshHandler';
 import { useState } from 'react';
 import Profile from './Pages/Profile';
+import ProductListing from './Pages/ProductListing';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -30,6 +31,7 @@ function App() {
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/upcoming" element={<Upcoming />} />
         <Route path='/profile' element={<Profile setIsAuthenticated={setIsAuthenticated}/>}/>
+        <Route path='/product-listing' element={<ProductListing/>}/>
       </Routes>
     </>
   );

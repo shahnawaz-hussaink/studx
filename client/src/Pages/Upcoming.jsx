@@ -27,7 +27,7 @@ export default function Upcoming(){
                     <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div className="h-full bg-[#1B6392] rounded-full transition-all duration-500 ease-in-out" style={{ width: `${progress}%` }}></div>
                     </div>
-                    <p className="text-sm text-gray-500 mt-2">Expected launch date: Sept 2025</p>
+                    <p className="text-sm text-gray-500 mt-2">Expected launch date: Jan 2026</p>
                     </div>
                     <Link to="/" className="inline-block bg-gray-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-950 transition-all duration-200 transform hover:-translate-y-1">Back to Homepage
                     </Link>
