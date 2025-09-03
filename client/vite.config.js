@@ -10,9 +10,9 @@ export default defineConfig({
     host: true, 
     port: 5173, 
   },
-  root: 'frontend', // tell Vite where index.html is
+  root: 'frontend', 
   build: {
-    outDir: '../dist', // put dist outside frontend, so Vercel can find it
+    outDir: '../dist', 
     emptyOutDir: true,
   },
 })
